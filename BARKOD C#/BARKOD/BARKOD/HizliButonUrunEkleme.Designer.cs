@@ -35,13 +35,13 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lBarkod = new System.Windows.Forms.Label();
             this.tUrunAra = new System.Windows.Forms.TextBox();
-            this.dgrid = new System.Windows.Forms.DataGridView();
+            this.gridUrunler = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -60,7 +60,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.splitContainer1.Panel2.Controls.Add(this.dgrid);
+            this.splitContainer1.Panel2.Controls.Add(this.gridUrunler);
             this.splitContainer1.Size = new System.Drawing.Size(956, 672);
             this.splitContainer1.SplitterDistance = 224;
             this.splitContainer1.TabIndex = 0;
@@ -128,25 +128,27 @@
             this.tUrunAra.TabIndex = 1;
             this.tUrunAra.TextChanged += new System.EventHandler(this.tUrunAra_TextChanged);
             // 
-            // dgrid
+            // gridUrunler
             // 
-            this.dgrid.AllowUserToAddRows = false;
-            this.dgrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgrid.EnableHeadersVisualStyles = false;
-            this.dgrid.Location = new System.Drawing.Point(0, 0);
-            this.dgrid.Name = "dgrid";
-            this.dgrid.RowHeadersVisible = false;
-            this.dgrid.RowHeadersWidth = 51;
-            this.dgrid.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
-            this.dgrid.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
-            this.dgrid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgrid.RowTemplate.Height = 30;
-            this.dgrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgrid.Size = new System.Drawing.Size(956, 444);
-            this.dgrid.TabIndex = 1;
+            this.gridUrunler.AllowUserToAddRows = false;
+            this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridUrunler.EnableHeadersVisualStyles = false;
+            this.gridUrunler.Location = new System.Drawing.Point(0, 0);
+            this.gridUrunler.Name = "gridUrunler";
+            this.gridUrunler.RowHeadersVisible = false;
+            this.gridUrunler.RowHeadersWidth = 51;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridUrunler.RowTemplate.Height = 30;
+            this.gridUrunler.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gridUrunler.Size = new System.Drawing.Size(956, 444);
+            this.gridUrunler.TabIndex = 1;
+            this.gridUrunler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_CellContentClick);
+            this.gridUrunler.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUrunler_CellContentDoubleClick);
             // 
             // HizliButonUrunEkleme
             // 
@@ -156,13 +158,14 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "HizliButonUrunEkleme";
             this.Text = "HizliButonUrunEkleme";
+            this.Load += new System.EventHandler(this.HizliButonUrunEkleme_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,7 +173,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView dgrid;
+        private System.Windows.Forms.DataGridView gridUrunler;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lBarkod;
         private System.Windows.Forms.TextBox tUrunAra;

@@ -37,5 +37,32 @@ namespace BARKOD
         {
 
         }
+
+        private void dgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gridUrunler_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gridUrunler.Rows.Count > 0)
+            {
+                string barkod = gridUrunler.CurrentRow.Cells["Barkod"].Value.ToString();
+                string urunAd = gridUrunler.CurrentRow.Cells["UrunAd"].Value.ToString();
+                double fiyat = Convert.ToDouble(gridUrunler.CurrentRow.Cells["SatisFiyat"].Value.ToString());
+                int id = Convert.ToInt16(lButonıd.Text);
+                var guncellenecek = db.HizliUrun.Find(id);
+                guncellenecek.Barkod = barkod;
+                guncellenecek.UrunAd = urunAd;
+                guncellenecek.Fiyat = fiyat;
+                db.SaveChanges();
+                MessageBox.Show("Buton tanımlanmıştır.");
+            }
+        }
+
+        private void HizliButonUrunEkleme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
