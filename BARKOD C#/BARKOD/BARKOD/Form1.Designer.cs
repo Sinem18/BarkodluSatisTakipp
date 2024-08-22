@@ -119,6 +119,7 @@
             this.bTusDuzeni = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -303,6 +304,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lKullanici);
             this.panel1.Controls.Add(this.bSatisYapiliyor);
             this.panel1.Controls.Add(this.lBarkod);
             this.panel1.Controls.Add(this.lMiktar);
@@ -411,6 +413,7 @@
             this.bNakit.TabIndex = 5;
             this.bNakit.Text = "NAKİT\r\n(F1)";
             this.bNakit.UseVisualStyleBackColor = false;
+            this.bNakit.Click += new System.EventHandler(this.bNakit_Click);
             // 
             // bKredikartı
             // 
@@ -1410,6 +1413,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Location = new System.Drawing.Point(303, 33);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(56, 16);
+            this.lKullanici.TabIndex = 5;
+            this.lKullanici.Text = "Kullanici";
+            // 
             // bDıgerUrun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1548,6 +1560,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox TextOdenen;
         private System.Windows.Forms.Label lOdenen;
+        private System.Windows.Forms.Label lKullanici;
     }
 }
 

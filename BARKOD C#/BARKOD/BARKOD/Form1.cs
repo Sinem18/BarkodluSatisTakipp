@@ -396,6 +396,49 @@ namespace BARKOD
 
 
         }
+        private void SatisYap(string odemesekli)
+        {
+            int satirsayisi = dgrid.Rows.Count;
+            bool satisiade = bSatisYapiliyor.Checked;// Burda hata olabilir.
+            double aliisfiyattoplam = 0;
+            if (satirsayisi > 0)
+            {
+                int? islemno = db.Islem.First().IslemNo;
+                Satis satis = new Satis();
+                for(int i = 0; i < satirsayisi; i++)
+                {
+                    satis.IslemNo = islemno;
+                    satis.UrunAd = dgrid.Rows[i].Cells["urunadi"].Value.ToString();
+                    satis.UrunGrup = dgrid.Rows[i].Cells["UrunGrup"].Value.ToString();
+                    satis.Barkod = dgrid.Rows[i].Cells["Barkod"].Value.ToString();
+                    satis.Birim = dgrid.Rows[i].Cells["Birim"].Value.ToString();
+                    satis.AlisFiyat = islemler.DoubleYap(dgrid.Rows[i].Cells["AlisFiyat"].Value.ToString());
+                    satis.SatisFiyat = islemler.DoubleYap(dgrid.Rows[i].Cells["Fiyat"].Value.ToString());
+                    satis.Miktar = islemler.DoubleYap(dgrid.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.kdvtutari = islemler.DoubleYap(dgrid.Rows[i].Cells["KDVTutari"].Value.ToString());
+                    satis.Toplam = islemler.DoubleYap(dgrid.Rows[i].Cells["Toplam"].Value.ToString()) * islemler.DoubleYap(dgrid.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.odemeSekli = odemesekli;/* Parametrede ne seçilirse buraya o gelecek.*/
+                    satis.Iade = satisiade;
+                    satis.Tarih = DateTime.Now;
+                    satis.Kullanici = lKullanici.Text;
+                    db.Satis.Add(satis);
+                    db.SaveChanges();
+                    MessageBox.Show("Başarılı");
+
+
+
+
+
+                }
+            }
+
+
+        }
+
+        private void bNakit_Click(object sender, EventArgs e)
+        {
+            SatisYap("Nakit");
+        }
     }
     
     
