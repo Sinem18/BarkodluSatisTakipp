@@ -201,6 +201,9 @@ namespace BARKOD
                     toplam = Convert.ToDouble(dgrid.Rows[i].Cells["Toplam"].Value);
                 }
                 t1234.Text = toplam.ToString("C2");
+                tMiktar.Text = "1";
+                tbarkod.Clear();
+                tbarkod.Focus();
             }
         }
         private void UrunGetirListele(Urun urun,string barkod,double miktar)
@@ -237,7 +240,7 @@ namespace BARKOD
                 dgrid.Rows[yeniSatir].Cells["Barkod"].Value = barkod ?? "Boş Barkod";
 
                 dgrid.Rows[satirsayisi].Cells["Barkod"].Value = barkod;
-                dgrid.Rows[satirsayisi].Cells["UrunAdi"].Value = urun.UrunAd ?? "Bilinmeyen urun";
+                dgrid.Rows[satirsayisi].Cells["urunadi"].Value = urun.UrunAd ?? "Bilinmeyen urun";
                 dgrid.Rows[satirsayisi].Cells["UrunGrup"].Value = urun.UrunGrup ?? "Bilinmeyen Grup";
                 dgrid.Rows[satirsayisi].Cells["Fiyat"].Value = urun.SatisFiyat != null ? urun.SatisFiyat : 0;
                 dgrid.Rows[satirsayisi].Cells["Birim"].Value = urun.Birim ?? "Birim Yok";
@@ -283,7 +286,24 @@ namespace BARKOD
 
         private void button38_Click(object sender, EventArgs e)
         {
+            if (tNumarator.Text != "")
+            {
+                int satirsayisi = dgrid.Rows.Count;
+                dgrid.Rows.Add();
+                dgrid.Rows[satirsayisi].Cells["Barkod"].Value = "1111111111116";
+                dgrid.Rows[satirsayisi].Cells["urunadi"].Value = "Barkodsuz Urun";
+                dgrid.Rows[satirsayisi].Cells["UrunGrup"].Value = "Barkodsuz Urun";
+                dgrid.Rows[satirsayisi].Cells["Birim"].Value = "Adet";
+                dgrid.Rows[satirsayisi].Cells["Miktar"].Value = 1;
+                dgrid.Rows[satirsayisi].Cells["Fiyat"].Value = Convert.ToDouble(tNumarator.Text);
+                dgrid.Rows[satirsayisi].Cells["KDVTutari"].Value = 0;
+                dgrid.Rows[satirsayisi].Cells["Toplam"].Value = Convert.ToDouble(tNumarator.Text);
+                tNumarator.Text = "";
+                GenelToplam();
+                tbarkod.Focus();
 
+
+            }
         }
 
         private void bAdet_Click(object sender, EventArgs e)
@@ -341,6 +361,40 @@ namespace BARKOD
 
 
             
+        }
+
+        private void biade_Click(object sender, EventArgs e)
+        {
+            if (bSatisYapiliyor.Checked)
+            {
+                bSatisYapiliyor.Checked = false;
+                bSatisYapiliyor.Text = "Satış Yapılıyor";
+            }
+            else
+            {
+                bSatisYapiliyor.Checked = true;
+                bSatisYapiliyor.Text = "İade işlemi";
+            }
+        }
+
+        private void bTemizle_Click(object sender, EventArgs e)
+        {
+            Temizlee();
+        }
+
+        private void Temizlee()
+        {
+            tMiktar.Text="1";
+            tbarkod.Clear();
+            t1234.Text = 0.ToString("C2");
+            tParaUstuu.Clear();
+            bSatisYapiliyor.Checked = false;
+            dgrid.Rows.Clear();
+            tNumarator.Text = "0";
+            tbarkod.Clear();
+            tbarkod.Focus();
+
+
         }
     }
     

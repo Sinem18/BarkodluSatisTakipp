@@ -565,7 +565,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 75);
+            this.label6.Location = new System.Drawing.Point(3, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(14, 16);
             this.label6.TabIndex = 1;
@@ -578,7 +578,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(104, 69);
+            this.panel3.Size = new System.Drawing.Size(104, 68);
             this.panel3.TabIndex = 2;
             // 
             // tParaUstuu
@@ -1300,6 +1300,7 @@
             this.bTemizle.TabIndex = 7;
             this.bTemizle.Text = "TEMİZLE";
             this.bTemizle.UseVisualStyleBackColor = false;
+            this.bTemizle.Click += new System.EventHandler(this.bTemizle_Click);
             // 
             // bAdet
             // 
@@ -1358,6 +1359,7 @@
             this.biade.TabIndex = 3;
             this.biade.Text = "İADE İŞLEMLERİ";
             this.biade.UseVisualStyleBackColor = false;
+            this.biade.Click += new System.EventHandler(this.biade_Click);
             // 
             // bBarkod
             // 
