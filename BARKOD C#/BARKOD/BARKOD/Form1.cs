@@ -396,11 +396,11 @@ namespace BARKOD
 
 
         }
-        private void SatisYap(string odemesekli)
+        public void SatisYap(string odemesekli)
         {
             int satirsayisi = dgrid.Rows.Count;
             bool satisiade = bSatisYapiliyor.Checked;// Burda hata olabilir.
-            double aliisfiyattoplam = 0;
+            double alisfiyattoplam = 0;
             if (satirsayisi > 0)
             {
                 int? islemno = db.Islem.First().IslemNo;
@@ -425,11 +425,60 @@ namespace BARKOD
                     db.SaveChanges();
                     MessageBox.Show("Başarılı");
 
+                    if (!satisiade)
+                    {
+                        islemler.StokAzalt(dgrid.Rows[i].Cells["Barkod"].Value.ToString(), islemler.DoubleYap(dgrid.Rows[i].Cells["Miktar"].Value.ToString()));
+                    }
+                    else
+                    {
+                        islemler.StokArtır(dgrid.Rows[i].Cells["Barkod"].Value.ToString(), islemler.DoubleYap(dgrid.Rows[i].Cells["Miktar"].Value.ToString()));
 
 
-
+                    }
+                    alisfiyattoplam += islemler.DoubleYap(dgrid.Rows[i].Cells["AlisFiyat"].Value.ToString());
 
                 }
+                IslemOzet io = new IslemOzet();
+                io.IslemNo = islemno;
+                io.Iade = satisiade;
+                io.AlisFiyatToplam = alisfiyattoplam;
+                io.Gelir = false;
+                io.Gider = false;
+                if(!satisiade)
+                {
+                    io.Aciklama = odemesekli + "Satis";
+                }
+                else
+                {
+                    io.Aciklama = "İade İşlemi (" + odemesekli + ")";
+                    
+                }
+                io.OdemeSekli = odemesekli;
+                io.Kullanici = lKullanici.Text;
+                io.Tarih = DateTime.Now;
+                switch (odemesekli)
+                {
+                    case "Nakit":
+                        io.Nakit = islemler.DoubleYap(t1234.Text);
+                        io.Kart = 0;
+                        break;
+                    case "Kart":
+                        io.Nakit = 0;
+                        io.Kart = islemler.DoubleYap(t1234.Text);
+                        break;
+                    case "Kart-Nakit":
+                        io.Nakit = islemler.DoubleYap(lNakit.Text);
+                        io.Kart = islemler.DoubleYap(lKart.Text);
+                        break;
+                }
+                db.IslemOzet.Add(io);
+                db.SaveChanges();
+
+                var islemnoartir = db.Islem.First();
+                islemnoartir.IslemNo += 1;
+                db.SaveChanges();
+                MessageBox.Show("Yazdırma İşlemi Yap");
+
             }
 
 
@@ -438,6 +487,56 @@ namespace BARKOD
         private void bNakit_Click(object sender, EventArgs e)
         {
             SatisYap("Nakit");
+        }
+
+        private void bKredikartı_Click(object sender, EventArgs e)
+        {
+            SatisYap("Kredi Kartı");
+        }
+
+        private void bKartNakit_Click(object sender, EventArgs e)
+        {
+            fNakitKart F = new fNakitKart();
+            F.ShowDialog(); 
+        }
+
+        private void bSatisYapiliyor_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbarkod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void bDıgerUrun_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            /*if (e.KeyCode == Keys.F1)
+            {
+                SatisYap("Nakit");
+
+            }*/
+        }
+
+        private void bDıgerUrun_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                SatisYap("Nakit");
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                SatisYap("Kart");
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                fNakitKart F = new fNakitKart();
+                F.ShowDialog();
+            }
         }
     }
     

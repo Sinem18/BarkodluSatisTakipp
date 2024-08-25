@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgrid = new System.Windows.Forms.DataGridView();
@@ -45,6 +45,9 @@
             this.Birim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Temizle = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lNakit = new System.Windows.Forms.Label();
+            this.lKart = new System.Windows.Forms.Label();
+            this.lKullanici = new System.Windows.Forms.Label();
             this.bSatisYapiliyor = new System.Windows.Forms.CheckBox();
             this.lBarkod = new System.Windows.Forms.Label();
             this.lMiktar = new System.Windows.Forms.Label();
@@ -119,7 +122,7 @@
             this.bTusDuzeni = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lKullanici = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -238,10 +241,10 @@
             // 
             // Fiyat
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle5;
             this.Fiyat.HeaderText = "Fiyat";
             this.Fiyat.MinimumWidth = 6;
             this.Fiyat.Name = "Fiyat";
@@ -304,6 +307,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lNakit);
+            this.panel1.Controls.Add(this.lKart);
             this.panel1.Controls.Add(this.lKullanici);
             this.panel1.Controls.Add(this.bSatisYapiliyor);
             this.panel1.Controls.Add(this.lBarkod);
@@ -316,6 +321,33 @@
             this.panel1.Size = new System.Drawing.Size(577, 123);
             this.panel1.TabIndex = 1;
             // 
+            // lNakit
+            // 
+            this.lNakit.AutoSize = true;
+            this.lNakit.Location = new System.Drawing.Point(411, 67);
+            this.lNakit.Name = "lNakit";
+            this.lNakit.Size = new System.Drawing.Size(41, 16);
+            this.lNakit.TabIndex = 7;
+            this.lNakit.Text = "Nakit ";
+            // 
+            // lKart
+            // 
+            this.lKart.AutoSize = true;
+            this.lKart.Location = new System.Drawing.Point(414, 46);
+            this.lKart.Name = "lKart";
+            this.lKart.Size = new System.Drawing.Size(30, 16);
+            this.lKart.TabIndex = 6;
+            this.lKart.Text = "Kart";
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Location = new System.Drawing.Point(303, 33);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(56, 16);
+            this.lKullanici.TabIndex = 5;
+            this.lKullanici.Text = "Kullanici";
+            // 
             // bSatisYapiliyor
             // 
             this.bSatisYapiliyor.Appearance = System.Windows.Forms.Appearance.Button;
@@ -326,12 +358,13 @@
             this.bSatisYapiliyor.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
             this.bSatisYapiliyor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.bSatisYapiliyor.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.bSatisYapiliyor.Location = new System.Drawing.Point(9, 28);
+            this.bSatisYapiliyor.Location = new System.Drawing.Point(12, 28);
             this.bSatisYapiliyor.Name = "bSatisYapiliyor";
             this.bSatisYapiliyor.Size = new System.Drawing.Size(128, 26);
             this.bSatisYapiliyor.TabIndex = 4;
             this.bSatisYapiliyor.Text = "SATIŞ YAPILIYOR";
             this.bSatisYapiliyor.UseVisualStyleBackColor = false;
+            this.bSatisYapiliyor.CheckedChanged += new System.EventHandler(this.bSatisYapiliyor_CheckedChanged);
             // 
             // lBarkod
             // 
@@ -361,6 +394,7 @@
             this.tbarkod.TabIndex = 1;
             this.tbarkod.TextChanged += new System.EventHandler(this.tbarkod_TextChanged);
             this.tbarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbarkod_KeyDown);
+            this.tbarkod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbarkod_KeyPress);
             // 
             // tMiktar
             // 
@@ -430,6 +464,7 @@
             this.bKredikartı.TabIndex = 3;
             this.bKredikartı.Text = "KREDİ KARTI\r\n(F3)";
             this.bKredikartı.UseVisualStyleBackColor = false;
+            this.bKredikartı.Click += new System.EventHandler(this.bKredikartı_Click);
             // 
             // bKartNakit
             // 
@@ -446,6 +481,7 @@
             this.bKartNakit.TabIndex = 2;
             this.bKartNakit.Text = "KART-NAKİT\r\n(F2)";
             this.bKartNakit.UseVisualStyleBackColor = false;
+            this.bKartNakit.Click += new System.EventHandler(this.bKartNakit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -898,8 +934,8 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.91512F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.55968F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.8147F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.34824F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.65783F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 1, 0);
@@ -1389,7 +1425,7 @@
             this.bTusDuzeni.Name = "bTusDuzeni";
             this.bTusDuzeni.Size = new System.Drawing.Size(75, 64);
             this.bTusDuzeni.TabIndex = 1;
-            this.bTusDuzeni.Text = "TUŞ DÜZENİ";
+            this.bTusDuzeni.Text = "İŞLEM BEKLET";
             this.bTusDuzeni.UseVisualStyleBackColor = false;
             // 
             // button38
@@ -1413,14 +1449,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lKullanici
+            // dataGridViewImageColumn1
             // 
-            this.lKullanici.AutoSize = true;
-            this.lKullanici.Location = new System.Drawing.Point(303, 33);
-            this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(56, 16);
-            this.lKullanici.TabIndex = 5;
-            this.lKullanici.Text = "Kullanici";
+            this.dataGridViewImageColumn1.HeaderText = "Temizle";
+            this.dataGridViewImageColumn1.Image = global::BARKOD.Properties.Resources.remove1;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 125;
             // 
             // bDıgerUrun
             // 
@@ -1429,10 +1466,13 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1213, 753);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "bDıgerUrun";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.paraUstuHesapla_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bDıgerUrun_KeyDown);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.bDıgerUrun_PreviewKeyDown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1484,7 +1524,6 @@
         private System.Windows.Forms.Button bKredikartı;
         private System.Windows.Forms.Button bKartNakit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox t1234;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button bH1;
@@ -1561,6 +1600,10 @@
         private System.Windows.Forms.TextBox TextOdenen;
         private System.Windows.Forms.Label lOdenen;
         private System.Windows.Forms.Label lKullanici;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        public System.Windows.Forms.Label lNakit;
+        public System.Windows.Forms.Label lKart;
+        public System.Windows.Forms.TextBox t1234;
     }
 }
 

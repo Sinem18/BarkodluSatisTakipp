@@ -16,5 +16,23 @@ namespace BARKOD
             return sonuc;
 
         }
+        public static void StokAzalt(string barkod,double miktar)
+        {
+            using( var db=new BarkodDBEntities())
+            {
+                var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
+                urunbilgi.Miktar -= miktar;
+                db.SaveChanges();
+            }
+        }
+        public static void StokArtır(string barkod, double miktar)
+        {
+            using (var db = new BarkodDBEntities())
+            {
+                var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
+                urunbilgi.Miktar += miktar;
+                db.SaveChanges();
+            }
+        }
     }
 }

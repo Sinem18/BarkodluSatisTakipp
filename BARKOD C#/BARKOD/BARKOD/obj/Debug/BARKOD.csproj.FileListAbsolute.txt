@@ -34,3 +34,4 @@ C:\Users\hp\OneDrive\Masaüstü\Github-barkod\BarkodluSatisTakipp\BARKOD C#\BARK
 C:\Users\hp\OneDrive\Masaüstü\Github-barkod\BarkodluSatisTakipp\BARKOD C#\BARKOD\BARKOD\obj\Debug\BARKOD.exe
 C:\Users\hp\OneDrive\Masaüstü\Github-barkod\BarkodluSatisTakipp\BARKOD C#\BARKOD\BARKOD\obj\Debug\BARKOD.pdb
 C:\Users\hp\OneDrive\Masaüstü\Github-barkod\BarkodluSatisTakipp\BARKOD C#\BARKOD\BARKOD\obj\Debug\BARKOD.bDıgerUrun.resources
+C:\Users\hp\OneDrive\Masaüstü\Github-barkod\BarkodluSatisTakipp\BARKOD C#\BARKOD\BARKOD\obj\Debug\BARKOD.fNakitKart.resources
