@@ -84,6 +84,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fUrunGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGiris.Designer.cs">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="HizliButonUrunEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGiris.resx">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HizliButonUrunEkleme.resx">
       <DependentUpon>HizliButonUrunEkleme.cs</DependentUpon>
@@ -206,6 +215,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\rapor4854.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\cancel24.png" />
+    <None Include="Resources\barcode4832.png" />
+    <None Include="Resources\Ekle20.png" />
     <None Include="Resources\remove1.png" />
   </ItemGroup>
   <ItemGroup>

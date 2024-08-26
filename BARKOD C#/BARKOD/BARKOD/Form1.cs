@@ -177,7 +177,9 @@ namespace BARKOD
                         else
                         {
                             Console.Beep(900, 2000);
-                            MessageBox.Show("Normal ürünekleme sayfası :");
+                            fUrunGiris f = new fUrunGiris();
+                            f.tBarkod.Text = barkod;
+                            f.ShowDialog();
 
                         }
                     }
