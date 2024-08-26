@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgrid = new System.Windows.Forms.DataGridView();
@@ -45,6 +46,18 @@
             this.Birim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Temizle = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gridBekle = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.lNakit = new System.Windows.Forms.Label();
             this.lKart = new System.Windows.Forms.Label();
             this.lKullanici = new System.Windows.Forms.Label();
@@ -119,7 +132,7 @@
             this.bOdenen = new System.Windows.Forms.Button();
             this.biade = new System.Windows.Forms.Button();
             this.bBarkod = new System.Windows.Forms.Button();
-            this.bTusDuzeni = new System.Windows.Forms.Button();
+            this.bIslemBeklet = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -130,6 +143,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBekle)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -241,10 +255,10 @@
             // 
             // Fiyat
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "C2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle13;
             this.Fiyat.HeaderText = "Fiyat";
             this.Fiyat.MinimumWidth = 6;
             this.Fiyat.Name = "Fiyat";
@@ -307,6 +321,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.gridBekle);
             this.panel1.Controls.Add(this.lNakit);
             this.panel1.Controls.Add(this.lKart);
             this.panel1.Controls.Add(this.lKullanici);
@@ -320,6 +335,126 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 123);
             this.panel1.TabIndex = 1;
+            // 
+            // gridBekle
+            // 
+            this.gridBekle.AllowUserToAddRows = false;
+            this.gridBekle.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gridBekle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridBekle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridBekle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewImageColumn2});
+            this.gridBekle.EnableHeadersVisualStyles = false;
+            this.gridBekle.Location = new System.Drawing.Point(12, 38);
+            this.gridBekle.Name = "gridBekle";
+            this.gridBekle.RowHeadersVisible = false;
+            this.gridBekle.RowHeadersWidth = 51;
+            this.gridBekle.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridBekle.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridBekle.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridBekle.RowTemplate.Height = 30;
+            this.gridBekle.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gridBekle.Size = new System.Drawing.Size(577, 46);
+            this.gridBekle.TabIndex = 8;
+            this.gridBekle.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Barkod";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "UrunAd";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ürün Grup";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "C2";
+            dataGridViewCellStyle14.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Fiyat";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Miktar";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Toplam";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "AlisFiyat";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "KDVTutari";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Satış";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Birim";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Temizle";
+            this.dataGridViewImageColumn2.Image = global::BARKOD.Properties.Resources.remove1;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 125;
             // 
             // lNakit
             // 
@@ -569,7 +704,7 @@
             // TextOdenen
             // 
             this.TextOdenen.BackColor = System.Drawing.Color.LightCoral;
-            this.TextOdenen.Location = new System.Drawing.Point(3, 61);
+            this.TextOdenen.Location = new System.Drawing.Point(1, 37);
             this.TextOdenen.Name = "TextOdenen";
             this.TextOdenen.Size = new System.Drawing.Size(103, 22);
             this.TextOdenen.TabIndex = 1;
@@ -1313,7 +1448,7 @@
             this.tableLayoutPanel9.Controls.Add(this.bOdenen, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.biade, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.bBarkod, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.bTusDuzeni, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.bIslemBeklet, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.button38, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(461, 3);
@@ -1414,19 +1549,20 @@
             this.bBarkod.Text = "BARKOD";
             this.bBarkod.UseVisualStyleBackColor = false;
             // 
-            // bTusDuzeni
+            // bIslemBeklet
             // 
-            this.bTusDuzeni.BackColor = System.Drawing.Color.Plum;
-            this.bTusDuzeni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bTusDuzeni.FlatAppearance.BorderColor = System.Drawing.Color.Plum;
-            this.bTusDuzeni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTusDuzeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bTusDuzeni.Location = new System.Drawing.Point(84, 3);
-            this.bTusDuzeni.Name = "bTusDuzeni";
-            this.bTusDuzeni.Size = new System.Drawing.Size(75, 64);
-            this.bTusDuzeni.TabIndex = 1;
-            this.bTusDuzeni.Text = "İŞLEM BEKLET";
-            this.bTusDuzeni.UseVisualStyleBackColor = false;
+            this.bIslemBeklet.BackColor = System.Drawing.Color.Plum;
+            this.bIslemBeklet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bIslemBeklet.FlatAppearance.BorderColor = System.Drawing.Color.Plum;
+            this.bIslemBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bIslemBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bIslemBeklet.Location = new System.Drawing.Point(84, 3);
+            this.bIslemBeklet.Name = "bIslemBeklet";
+            this.bIslemBeklet.Size = new System.Drawing.Size(75, 64);
+            this.bIslemBeklet.TabIndex = 1;
+            this.bIslemBeklet.Text = "İŞLEM BEKLET";
+            this.bIslemBeklet.UseVisualStyleBackColor = false;
+            this.bIslemBeklet.Click += new System.EventHandler(this.bIslemBeklet_Click);
             // 
             // button38
             // 
@@ -1481,6 +1617,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBekle)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1572,7 +1709,7 @@
         private System.Windows.Forms.Button bOdenen;
         private System.Windows.Forms.Button biade;
         private System.Windows.Forms.Button bBarkod;
-        private System.Windows.Forms.Button bTusDuzeni;
+        private System.Windows.Forms.Button bIslemBeklet;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button bNakit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -1604,6 +1741,18 @@
         public System.Windows.Forms.Label lNakit;
         public System.Windows.Forms.Label lKart;
         public System.Windows.Forms.TextBox t1234;
+        private System.Windows.Forms.DataGridView gridBekle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
 

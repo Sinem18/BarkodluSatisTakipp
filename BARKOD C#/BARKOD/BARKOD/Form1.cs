@@ -323,6 +323,7 @@ namespace BARKOD
             {
                 double sonuc = islemler.DoubleYap(tNumarator.Text) - islemler.DoubleYap(t1234.Text);
                 tParaUstuu.Text = sonuc.ToString("C2");
+                lOdenen.Text = islemler.DoubleYap(tNumarator.Text).ToString("C2");
                 tNumarator.Clear();
                 tbarkod.Focus();
 
@@ -357,6 +358,7 @@ namespace BARKOD
             
                 Button b = (Button)sender;
                 double sonuc = islemler.DoubleYap(b.Text) - islemler.DoubleYap(t1234.Text);
+            TextOdenen.Text = islemler.DoubleYap(b.Text).ToString("C2");
             tParaUstuu.Text = sonuc.ToString("C2");
 
 
@@ -536,6 +538,72 @@ namespace BARKOD
             {
                 fNakitKart F = new fNakitKart();
                 F.ShowDialog();
+            }
+        }
+
+        private void bIslemBeklet_Click(object sender, EventArgs e)
+        {
+            if(bIslemBeklet.Text=="İŞLEM BEKLET")
+            {
+                Bekle();
+                bIslemBeklet.BackColor = System.Drawing.Color.OrangeRed;
+                bIslemBeklet.Text = "İşlem Bekliyor";
+                dgrid.Rows.Clear();
+
+
+            }
+            else
+            {
+                BeklemedenCık();
+                bIslemBeklet.BackColor = System.Drawing.Color.DimGray;
+                bIslemBeklet.Text = "İşlem Bejkletmeden çıkıyor";
+                gridBekle.Rows.Clear();
+
+                
+            }
+            
+
+        }
+
+        private void Bekle()
+        {
+            int satir = dgrid.Rows.Count;
+            int sutun = dgrid.Columns.Count;
+            if (satir>0)
+            {
+                for(int i = 0; i < satir; i++)
+                {
+                    gridBekle.Rows.Add();
+                    for(int j = 0; j < sutun; j++)
+                    {
+                        gridBekle.Rows[i].Cells[j].Value = dgrid.Rows[i].Cells[j].Value;
+
+
+                        
+                    }
+                }
+
+            }
+
+        }
+        private void BeklemedenCık()
+        {
+            int satir = gridBekle.Rows.Count;
+            int sutun = gridBekle.Columns.Count;
+            if (satir > 0)
+            {
+                for (int i = 0; i < satir; i++)
+                {
+                    dgrid.Rows.Add();
+                    for (int j = 0; j < sutun; j++)
+                    {
+                        dgrid.Rows[i].Cells[j].Value = gridBekle.Rows[i].Cells[j].Value;
+
+
+
+                    }
+                }
+
             }
         }
     }
