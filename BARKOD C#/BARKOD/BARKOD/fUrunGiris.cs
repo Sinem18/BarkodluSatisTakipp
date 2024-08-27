@@ -33,7 +33,7 @@ namespace BARKOD
                     var urun=db.Urun.Where(a=>a.Barkod==barkod).SingleOrDefault();
                     tUrunAdi.Text = urun.Barkod;
                     tAciklama.Text = urun.Aciklama;
-                    tUrunGrup.Text = urun.UrunGrup;
+                    cmbUrunGrup.Text = urun.UrunGrup;
                     tAlisFiyat.Text = urun.AlisFiyat.ToString();
                     tSatisFiyat.Text = urun.SatisFiyat.ToString();
                     tMiktar.Text= urun.Miktar.ToString();
@@ -50,7 +50,7 @@ namespace BARKOD
 
         private void bKaydet_Click(object sender, EventArgs e)
         {
-            if(tBarkod.Text!=""&& tUrunAdi.Text!=""&& tAciklama.Text!=""&& tUrunGrup.Text!="" && tAlisFiyat.Text!="" && tSatisFiyat.Text!="" &&tMiktar.Text!="" && tKdv.Text!="")
+            if(tBarkod.Text!=""&& tUrunAdi.Text!=""&& tAciklama.Text!=""&& cmbUrunGrup.Text!="" && tAlisFiyat.Text!="" && tSatisFiyat.Text!="" &&tMiktar.Text!="" && tKdv.Text!="")
             {
                 if (db.Urun.Any(a=>a.Barkod==tBarkod.Text))
                 {
@@ -58,7 +58,7 @@ namespace BARKOD
                     güncelle.Barkod = tBarkod.Text;
                     güncelle.UrunAd = tUrunAdi.Text;
                     güncelle.Aciklama = tAciklama.Text;
-                    güncelle.UrunGrup = tUrunGrup.Text;
+                    güncelle.UrunGrup = cmbUrunGrup.Text;
                     güncelle.AlisFiyat = Convert.ToDouble(tAlisFiyat.Text);
                     güncelle.SatisFiyat = Convert.ToDouble(tSatisFiyat.Text);
                     güncelle.KDVOrani = /*Convert.ToInt32(tKdv.Text)*/ 0; // Düzeltme yap !!!
@@ -76,7 +76,7 @@ namespace BARKOD
                     urun.Barkod = tBarkod.Text;
                     urun.UrunAd = tUrunAdi.Text;
                     urun.Aciklama = tAciklama.Text;
-                    urun.UrunGrup = tUrunGrup.Text;
+                    urun.UrunGrup = cmbUrunGrup.Text;
                     urun.AlisFiyat = Convert.ToDouble(tAlisFiyat.Text);
                     urun.SatisFiyat = Convert.ToDouble(tSatisFiyat.Text);
                     urun.KDVOrani = Convert.ToInt32(tKdv.Text);
@@ -87,6 +87,13 @@ namespace BARKOD
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
                     db.SaveChanges();
+                    if (tBarkod.Text.Length == 8)
+                    {
+                        var ozelbarkod = db.Barkod.First();
+                        ozelbarkod.BarkodNo += 1;
+                        db.SaveChanges();
+
+                    }
                     TemizlE();
 
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
@@ -116,7 +123,7 @@ namespace BARKOD
             tBarkod.Clear();
             tUrunAdi.Clear();
             tAciklama.Clear();
-            tUrunGrup.Clear();
+           // cmbUrunGrup.Clear(); // Hata olabilir 
             tAlisFiyat.Text = "0";
             tSatisFiyat.Text = "0";
             tMiktar.Text = "0";
@@ -127,6 +134,35 @@ namespace BARKOD
         private void fUrunGiris_Load(object sender, EventArgs e)
         {
             tUrunSayisi.Text = db.Urun.Count().ToString();
+            GrupDoldur();
+        }
+
+        public void GrupDoldur()
+        {
+            cmbUrunGrup.DisplayMember = "UrunGrupAd";
+            cmbUrunGrup.ValueMember = "Id";
+            cmbUrunGrup.DataSource = db.UrunGrup.OrderBy(a => a.UrunGrupAd).ToList();
+        }
+
+        private void bUrunGrubu_Click(object sender, EventArgs e)
+        {
+            fUrunGrubuEkle f=new fUrunGrubuEkle();
+            f.ShowDialog();
+        }
+
+        private void bBarkodOlustur_Click(object sender, EventArgs e)
+        {
+            var barkodno = db.Barkod.First();
+            int karakter = barkodno.BarkodNo.ToString().Length;
+            string sifirlar = string.Empty;// ne işe yaradığına bak 
+            for(int i = 0; i < 8 - karakter; i++)
+            {
+                sifirlar = sifirlar + "0";
+            }
+            string olusanbarkod = sifirlar + barkodno.BarkodNo.ToString();
+            tBarkod.Text = olusanbarkod;
+            tUrunAdi.Focus();
+
         }
     }
 }
