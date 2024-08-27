@@ -21,5 +21,112 @@ namespace BARKOD
         {
 
         }
+
+        BarkodDBEntities db=new BarkodDBEntities();
+        private void tBarkod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string barkod = tBarkod.Text.Trim();
+                if (db.Urun.Any(a => a.Barkod == barkod))
+                {
+                    var urun=db.Urun.Where(a=>a.Barkod==barkod).SingleOrDefault();
+                    tUrunAdi.Text = urun.Barkod;
+                    tAciklama.Text = urun.Aciklama;
+                    tUrunGrup.Text = urun.UrunGrup;
+                    tAlisFiyat.Text = urun.AlisFiyat.ToString();
+                    tSatisFiyat.Text = urun.SatisFiyat.ToString();
+                    tMiktar.Text= urun.Miktar.ToString();
+                    tKdv.Text=urun.KDVTutari.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Ürün kayıtlı Değil,Kaydedebilirsiniz.");
+                }
+            }
+
+        }
+
+        private void bKaydet_Click(object sender, EventArgs e)
+        {
+            if(tBarkod.Text!=""&& tUrunAdi.Text!=""&& tAciklama.Text!=""&& tUrunGrup.Text!="" && tAlisFiyat.Text!="" && tSatisFiyat.Text!="" &&tMiktar.Text!="" && tKdv.Text!="")
+            {
+                if (db.Urun.Any(a=>a.Barkod==tBarkod.Text))
+                {
+                    var güncelle=db.Urun.Where(a=>a.Barkod==tBarkod.Text).SingleOrDefault();
+                    güncelle.Barkod = tBarkod.Text;
+                    güncelle.UrunAd = tUrunAdi.Text;
+                    güncelle.Aciklama = tAciklama.Text;
+                    güncelle.UrunGrup = tUrunGrup.Text;
+                    güncelle.AlisFiyat = Convert.ToDouble(tAlisFiyat.Text);
+                    güncelle.SatisFiyat = Convert.ToDouble(tSatisFiyat.Text);
+                    güncelle.KDVOrani = /*Convert.ToInt32(tKdv.Text)*/ 0; // Düzeltme yap !!!
+                    güncelle.KDVTutari = /*Math.Round(islemler.DoubleYap(tSatisFiyat.Text) * tKdv.Text / 100,2)*/ "0"; // düzelt hatalı işlem.
+                    güncelle.Miktar += Convert.ToDouble(tMiktar.Text);
+                    güncelle.Birim = "Adet";
+                    güncelle.Tarih = DateTime.Now;
+                    güncelle.Kullanici = lKullanici.Text;
+                    db.SaveChanges();
+                    MessageBox.Show("Ürün Güncellenmiştir.");
+                    gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
+                }
+                else {
+                    Urun urun = new Urun();
+                    urun.Barkod = tBarkod.Text;
+                    urun.UrunAd = tUrunAdi.Text;
+                    urun.Aciklama = tAciklama.Text;
+                    urun.UrunGrup = tUrunGrup.Text;
+                    urun.AlisFiyat = Convert.ToDouble(tAlisFiyat.Text);
+                    urun.SatisFiyat = Convert.ToDouble(tSatisFiyat.Text);
+                    urun.KDVOrani = Convert.ToInt32(tKdv.Text);
+                    urun.KDVTutari = /*Math.Round(islemler.DoubleYap(tSatisFiyat.Text) * tKdv.Text / 100,2)*/ "0"; // düzelt hatalı işlem.
+                    urun.Miktar = Convert.ToDouble(tMiktar.Text);
+                    urun.Birim = "Adet";
+                    urun.Tarih = DateTime.Now;
+                    urun.Kullanici = lKullanici.Text;
+                    db.Urun.Add(urun);
+                    db.SaveChanges();
+                    TemizlE();
+
+                    gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Bilgi Girişlerinizi Kontrol Ediniz.");
+                tBarkod.Focus();
+            }
+        }
+
+        private void tUrunAra_TextChanged(object sender, EventArgs e)
+        {
+            string urunAd=tUrunAra.Text;
+            gridUrunler.DataSource=db.Urun.Where(a=>a.UrunAd.Contains(urunAd)).ToList();
+        }
+
+        private void bİptal_Click(object sender, EventArgs e)
+        {
+            TemizlE();
+        }
+        private void TemizlE()
+        {
+            tBarkod.Clear();
+            tUrunAdi.Clear();
+            tAciklama.Clear();
+            tUrunGrup.Clear();
+            tAlisFiyat.Text = "0";
+            tSatisFiyat.Text = "0";
+            tMiktar.Text = "0";
+            tKdv.Text = "8";
+            tBarkod.Focus();
+        }
+
+        private void fUrunGiris_Load(object sender, EventArgs e)
+        {
+            tUrunSayisi.Text = db.Urun.Count().ToString();
+        }
     }
 }

@@ -29,34 +29,39 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tStandart5 = new BARKOD.tStandart();
-            this.tNumeric5 = new BARKOD.tNumeric();
+            this.lKullanici = new BARKOD.lStandart();
+            this.lStandart11 = new BARKOD.lStandart();
+            this.tUrunAra = new BARKOD.tStandart();
+            this.tUrunSayisi = new BARKOD.tNumeric();
             this.lStandart10 = new BARKOD.lStandart();
             this.lStandart9 = new BARKOD.lStandart();
-            this.bStandart5 = new BARKOD.bStandart();
-            this.bStandart4 = new BARKOD.bStandart();
-            this.bStandart3 = new BARKOD.bStandart();
-            this.bStandart2 = new BARKOD.bStandart();
-            this.bStandart1 = new BARKOD.bStandart();
-            this.tNumeric4 = new BARKOD.tNumeric();
-            this.tNumeric3 = new BARKOD.tNumeric();
-            this.tNumeric2 = new BARKOD.tNumeric();
-            this.tNumeric1 = new BARKOD.tNumeric();
+            this.bRaporAl = new BARKOD.bStandart();
+            this.bKaydet = new BARKOD.bStandart();
+            this.bİptal = new BARKOD.bStandart();
+            this.bBarkodd = new BARKOD.bStandart();
+            this.bUrunGrubu = new BARKOD.bStandart();
+            this.tKdv = new BARKOD.tNumeric();
+            this.tMiktar = new BARKOD.tNumeric();
+            this.tSatisFiyat = new BARKOD.tNumeric();
+            this.tAlisFiyat = new BARKOD.tNumeric();
             this.lStandart8 = new BARKOD.lStandart();
             this.lStandart7 = new BARKOD.lStandart();
             this.lStandart6 = new BARKOD.lStandart();
             this.lStandart5 = new BARKOD.lStandart();
-            this.tStandart4 = new BARKOD.tStandart();
-            this.tStandart3 = new BARKOD.tStandart();
-            this.tStandart2 = new BARKOD.tStandart();
+            this.tUrunGrup = new BARKOD.tStandart();
+            this.tAciklama = new BARKOD.tStandart();
+            this.tUrunAdi = new BARKOD.tStandart();
             this.tBarkod = new BARKOD.tStandart();
             this.lStandart4 = new BARKOD.lStandart();
             this.lStandart3 = new BARKOD.lStandart();
             this.lStandart2 = new BARKOD.lStandart();
             this.lStandart1 = new BARKOD.lStandart();
+            this.gridUrunler = new BARKOD.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -69,53 +74,82 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart5);
-            this.splitContainer1.Panel1.Controls.Add(this.tNumeric5);
+            this.splitContainer1.Panel1.Controls.Add(this.lKullanici);
+            this.splitContainer1.Panel1.Controls.Add(this.lStandart11);
+            this.splitContainer1.Panel1.Controls.Add(this.tUrunAra);
+            this.splitContainer1.Panel1.Controls.Add(this.tUrunSayisi);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart10);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart9);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart5);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart4);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart3);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart2);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart1);
-            this.splitContainer1.Panel1.Controls.Add(this.tNumeric4);
-            this.splitContainer1.Panel1.Controls.Add(this.tNumeric3);
-            this.splitContainer1.Panel1.Controls.Add(this.tNumeric2);
-            this.splitContainer1.Panel1.Controls.Add(this.tNumeric1);
+            this.splitContainer1.Panel1.Controls.Add(this.bRaporAl);
+            this.splitContainer1.Panel1.Controls.Add(this.bKaydet);
+            this.splitContainer1.Panel1.Controls.Add(this.bİptal);
+            this.splitContainer1.Panel1.Controls.Add(this.bBarkodd);
+            this.splitContainer1.Panel1.Controls.Add(this.bUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.tKdv);
+            this.splitContainer1.Panel1.Controls.Add(this.tMiktar);
+            this.splitContainer1.Panel1.Controls.Add(this.tSatisFiyat);
+            this.splitContainer1.Panel1.Controls.Add(this.tAlisFiyat);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart8);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart7);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart6);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart5);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart4);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart3);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart2);
+            this.splitContainer1.Panel1.Controls.Add(this.tUrunGrup);
+            this.splitContainer1.Panel1.Controls.Add(this.tAciklama);
+            this.splitContainer1.Panel1.Controls.Add(this.tUrunAdi);
             this.splitContainer1.Panel1.Controls.Add(this.tBarkod);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart4);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart3);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart2);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gridUrunler);
             this.splitContainer1.Size = new System.Drawing.Size(1126, 631);
             this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 0;
             // 
-            // tStandart5
+            // lKullanici
             // 
-            this.tStandart5.BackColor = System.Drawing.Color.White;
-            this.tStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart5.Location = new System.Drawing.Point(182, 318);
-            this.tStandart5.Name = "tStandart5";
-            this.tStandart5.Size = new System.Drawing.Size(176, 30);
-            this.tStandart5.TabIndex = 19;
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(569, 232);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(112, 25);
+            this.lKullanici.TabIndex = 21;
+            this.lKullanici.Text = "lStandart12";
             // 
-            // tNumeric5
+            // lStandart11
             // 
-            this.tNumeric5.BackColor = System.Drawing.Color.White;
-            this.tNumeric5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tNumeric5.Location = new System.Drawing.Point(563, 318);
-            this.tNumeric5.Name = "tNumeric5";
-            this.tNumeric5.Size = new System.Drawing.Size(119, 30);
-            this.tNumeric5.TabIndex = 18;
-            this.tNumeric5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lStandart11.AutoSize = true;
+            this.lStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart11.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart11.Location = new System.Drawing.Point(422, 232);
+            this.lStandart11.Name = "lStandart11";
+            this.lStandart11.Size = new System.Drawing.Size(121, 25);
+            this.lStandart11.TabIndex = 20;
+            this.lStandart11.Text = "KULLANICI:";
+            // 
+            // tUrunAra
+            // 
+            this.tUrunAra.BackColor = System.Drawing.Color.White;
+            this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunAra.Location = new System.Drawing.Point(182, 318);
+            this.tUrunAra.Name = "tUrunAra";
+            this.tUrunAra.Size = new System.Drawing.Size(176, 30);
+            this.tUrunAra.TabIndex = 19;
+            this.tUrunAra.TextChanged += new System.EventHandler(this.tUrunAra_TextChanged);
+            // 
+            // tUrunSayisi
+            // 
+            this.tUrunSayisi.BackColor = System.Drawing.Color.White;
+            this.tUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunSayisi.Location = new System.Drawing.Point(563, 318);
+            this.tUrunSayisi.Name = "tUrunSayisi";
+            this.tUrunSayisi.Size = new System.Drawing.Size(119, 30);
+            this.tUrunSayisi.TabIndex = 18;
+            this.tUrunSayisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lStandart10
             // 
@@ -139,119 +173,121 @@
             this.lStandart9.TabIndex = 16;
             this.lStandart9.Text = "ÜRÜN ARA";
             // 
-            // bStandart5
+            // bRaporAl
             // 
-            this.bStandart5.BackColor = System.Drawing.Color.Salmon;
-            this.bStandart5.FlatAppearance.BorderColor = System.Drawing.Color.Salmon;
-            this.bStandart5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart5.Image = global::BARKOD.Properties.Resources.rapor4854;
-            this.bStandart5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart5.Location = new System.Drawing.Point(983, 259);
-            this.bStandart5.Name = "bStandart5";
-            this.bStandart5.Size = new System.Drawing.Size(119, 87);
-            this.bStandart5.TabIndex = 5;
-            this.bStandart5.Text = "Rapor Al";
-            this.bStandart5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bStandart5.UseVisualStyleBackColor = false;
+            this.bRaporAl.BackColor = System.Drawing.Color.Salmon;
+            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.Salmon;
+            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRaporAl.Image = global::BARKOD.Properties.Resources.rapor4854;
+            this.bRaporAl.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bRaporAl.Location = new System.Drawing.Point(957, 255);
+            this.bRaporAl.Name = "bRaporAl";
+            this.bRaporAl.Size = new System.Drawing.Size(119, 96);
+            this.bRaporAl.TabIndex = 5;
+            this.bRaporAl.Text = "Rapor Al";
+            this.bRaporAl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bRaporAl.UseVisualStyleBackColor = false;
             // 
-            // bStandart4
+            // bKaydet
             // 
-            this.bStandart4.BackColor = System.Drawing.Color.Teal;
-            this.bStandart4.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.bStandart4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart4.Image = global::BARKOD.Properties.Resources.save24;
-            this.bStandart4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart4.Location = new System.Drawing.Point(725, 122);
-            this.bStandart4.Name = "bStandart4";
-            this.bStandart4.Size = new System.Drawing.Size(78, 71);
-            this.bStandart4.TabIndex = 5;
-            this.bStandart4.Text = "Kaydet";
-            this.bStandart4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bStandart4.UseVisualStyleBackColor = false;
+            this.bKaydet.BackColor = System.Drawing.Color.Teal;
+            this.bKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.bKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKaydet.Image = global::BARKOD.Properties.Resources.save24;
+            this.bKaydet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bKaydet.Location = new System.Drawing.Point(725, 122);
+            this.bKaydet.Name = "bKaydet";
+            this.bKaydet.Size = new System.Drawing.Size(78, 81);
+            this.bKaydet.TabIndex = 5;
+            this.bKaydet.Text = "Kaydet";
+            this.bKaydet.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bKaydet.UseVisualStyleBackColor = false;
+            this.bKaydet.Click += new System.EventHandler(this.bKaydet_Click);
             // 
-            // bStandart3
+            // bİptal
             // 
-            this.bStandart3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.bStandart3.FlatAppearance.BorderColor = System.Drawing.Color.Turquoise;
-            this.bStandart3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart3.Image = global::BARKOD.Properties.Resources.cancel24;
-            this.bStandart3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart3.Location = new System.Drawing.Point(725, 36);
-            this.bStandart3.Name = "bStandart3";
-            this.bStandart3.Size = new System.Drawing.Size(78, 69);
-            this.bStandart3.TabIndex = 5;
-            this.bStandart3.Text = "İptal";
-            this.bStandart3.UseVisualStyleBackColor = false;
+            this.bİptal.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.bİptal.FlatAppearance.BorderColor = System.Drawing.Color.Turquoise;
+            this.bİptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bİptal.Image = global::BARKOD.Properties.Resources.cancel24;
+            this.bİptal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bİptal.Location = new System.Drawing.Point(725, 36);
+            this.bİptal.Name = "bİptal";
+            this.bİptal.Size = new System.Drawing.Size(78, 80);
+            this.bİptal.TabIndex = 5;
+            this.bİptal.Text = "İptal";
+            this.bİptal.UseVisualStyleBackColor = false;
+            this.bİptal.Click += new System.EventHandler(this.bİptal_Click);
             // 
-            // bStandart2
+            // bBarkodd
             // 
-            this.bStandart2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.bStandart2.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.bStandart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart2.Image = global::BARKOD.Properties.Resources.barcode4832;
-            this.bStandart2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart2.Location = new System.Drawing.Point(274, 209);
-            this.bStandart2.Name = "bStandart2";
-            this.bStandart2.Size = new System.Drawing.Size(84, 89);
-            this.bStandart2.TabIndex = 5;
-            this.bStandart2.Text = "Barkod Oluştur";
-            this.bStandart2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bStandart2.UseVisualStyleBackColor = false;
+            this.bBarkodd.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.bBarkodd.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.bBarkodd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBarkodd.Image = global::BARKOD.Properties.Resources.barcode4832;
+            this.bBarkodd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bBarkodd.Location = new System.Drawing.Point(274, 209);
+            this.bBarkodd.Name = "bBarkodd";
+            this.bBarkodd.Size = new System.Drawing.Size(84, 89);
+            this.bBarkodd.TabIndex = 5;
+            this.bBarkodd.Text = "Barkod Oluştur";
+            this.bBarkodd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bBarkodd.UseVisualStyleBackColor = false;
             // 
-            // bStandart1
+            // bUrunGrubu
             // 
-            this.bStandart1.BackColor = System.Drawing.Color.HotPink;
-            this.bStandart1.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
-            this.bStandart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart1.Image = global::BARKOD.Properties.Resources.Ekle20;
-            this.bStandart1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart1.Location = new System.Drawing.Point(182, 209);
-            this.bStandart1.Name = "bStandart1";
-            this.bStandart1.Size = new System.Drawing.Size(86, 89);
-            this.bStandart1.TabIndex = 5;
-            this.bStandart1.Text = "Ürün Gurubu Ekle";
-            this.bStandart1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bStandart1.UseVisualStyleBackColor = false;
+            this.bUrunGrubu.BackColor = System.Drawing.Color.HotPink;
+            this.bUrunGrubu.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.bUrunGrubu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bUrunGrubu.Image = global::BARKOD.Properties.Resources.Ekle20;
+            this.bUrunGrubu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bUrunGrubu.Location = new System.Drawing.Point(182, 209);
+            this.bUrunGrubu.Name = "bUrunGrubu";
+            this.bUrunGrubu.Size = new System.Drawing.Size(86, 89);
+            this.bUrunGrubu.TabIndex = 5;
+            this.bUrunGrubu.Text = "Ürün Gurubu Ekle";
+            this.bUrunGrubu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bUrunGrubu.UseVisualStyleBackColor = false;
             // 
-            // tNumeric4
+            // tKdv
             // 
-            this.tNumeric4.BackColor = System.Drawing.Color.White;
-            this.tNumeric4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tNumeric4.Location = new System.Drawing.Point(563, 168);
-            this.tNumeric4.Name = "tNumeric4";
-            this.tNumeric4.Size = new System.Drawing.Size(120, 30);
-            this.tNumeric4.TabIndex = 15;
-            this.tNumeric4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tKdv.BackColor = System.Drawing.Color.White;
+            this.tKdv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tKdv.Location = new System.Drawing.Point(563, 168);
+            this.tKdv.Name = "tKdv";
+            this.tKdv.Size = new System.Drawing.Size(120, 30);
+            this.tKdv.TabIndex = 15;
+            this.tKdv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tNumeric3
+            // tMiktar
             // 
-            this.tNumeric3.BackColor = System.Drawing.Color.White;
-            this.tNumeric3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tNumeric3.Location = new System.Drawing.Point(563, 124);
-            this.tNumeric3.Name = "tNumeric3";
-            this.tNumeric3.Size = new System.Drawing.Size(120, 30);
-            this.tNumeric3.TabIndex = 14;
-            this.tNumeric3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tMiktar.BackColor = System.Drawing.Color.White;
+            this.tMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tMiktar.Location = new System.Drawing.Point(563, 124);
+            this.tMiktar.Name = "tMiktar";
+            this.tMiktar.Size = new System.Drawing.Size(120, 30);
+            this.tMiktar.TabIndex = 14;
+            this.tMiktar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tNumeric2
+            // tSatisFiyat
             // 
-            this.tNumeric2.BackColor = System.Drawing.Color.White;
-            this.tNumeric2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tNumeric2.Location = new System.Drawing.Point(563, 81);
-            this.tNumeric2.Name = "tNumeric2";
-            this.tNumeric2.Size = new System.Drawing.Size(119, 30);
-            this.tNumeric2.TabIndex = 13;
-            this.tNumeric2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tSatisFiyat.BackColor = System.Drawing.Color.White;
+            this.tSatisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tSatisFiyat.Location = new System.Drawing.Point(563, 81);
+            this.tSatisFiyat.Name = "tSatisFiyat";
+            this.tSatisFiyat.Size = new System.Drawing.Size(119, 30);
+            this.tSatisFiyat.TabIndex = 13;
+            this.tSatisFiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tNumeric1
+            // tAlisFiyat
             // 
-            this.tNumeric1.BackColor = System.Drawing.Color.White;
-            this.tNumeric1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tNumeric1.Location = new System.Drawing.Point(562, 36);
-            this.tNumeric1.Name = "tNumeric1";
-            this.tNumeric1.Size = new System.Drawing.Size(120, 30);
-            this.tNumeric1.TabIndex = 12;
-            this.tNumeric1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tAlisFiyat.BackColor = System.Drawing.Color.White;
+            this.tAlisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tAlisFiyat.Location = new System.Drawing.Point(562, 36);
+            this.tAlisFiyat.Name = "tAlisFiyat";
+            this.tAlisFiyat.Size = new System.Drawing.Size(120, 30);
+            this.tAlisFiyat.TabIndex = 12;
+            this.tAlisFiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lStandart8
             // 
@@ -297,32 +333,32 @@
             this.lStandart5.TabIndex = 8;
             this.lStandart5.Text = "ALIŞ FİYATI: ";
             // 
-            // tStandart4
+            // tUrunGrup
             // 
-            this.tStandart4.BackColor = System.Drawing.Color.White;
-            this.tStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart4.Location = new System.Drawing.Point(182, 173);
-            this.tStandart4.Name = "tStandart4";
-            this.tStandart4.Size = new System.Drawing.Size(176, 30);
-            this.tStandart4.TabIndex = 7;
+            this.tUrunGrup.BackColor = System.Drawing.Color.White;
+            this.tUrunGrup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunGrup.Location = new System.Drawing.Point(182, 173);
+            this.tUrunGrup.Name = "tUrunGrup";
+            this.tUrunGrup.Size = new System.Drawing.Size(176, 30);
+            this.tUrunGrup.TabIndex = 7;
             // 
-            // tStandart3
+            // tAciklama
             // 
-            this.tStandart3.BackColor = System.Drawing.Color.White;
-            this.tStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart3.Location = new System.Drawing.Point(183, 122);
-            this.tStandart3.Name = "tStandart3";
-            this.tStandart3.Size = new System.Drawing.Size(175, 30);
-            this.tStandart3.TabIndex = 6;
+            this.tAciklama.BackColor = System.Drawing.Color.White;
+            this.tAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tAciklama.Location = new System.Drawing.Point(182, 119);
+            this.tAciklama.Name = "tAciklama";
+            this.tAciklama.Size = new System.Drawing.Size(175, 30);
+            this.tAciklama.TabIndex = 6;
             // 
-            // tStandart2
+            // tUrunAdi
             // 
-            this.tStandart2.BackColor = System.Drawing.Color.White;
-            this.tStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart2.Location = new System.Drawing.Point(182, 75);
-            this.tStandart2.Name = "tStandart2";
-            this.tStandart2.Size = new System.Drawing.Size(176, 30);
-            this.tStandart2.TabIndex = 5;
+            this.tUrunAdi.BackColor = System.Drawing.Color.White;
+            this.tUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tUrunAdi.Location = new System.Drawing.Point(183, 75);
+            this.tUrunAdi.Name = "tUrunAdi";
+            this.tUrunAdi.Size = new System.Drawing.Size(176, 30);
+            this.tUrunAdi.TabIndex = 5;
             // 
             // tBarkod
             // 
@@ -332,6 +368,7 @@
             this.tBarkod.Name = "tBarkod";
             this.tBarkod.Size = new System.Drawing.Size(176, 30);
             this.tBarkod.TabIndex = 4;
+            this.tBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBarkod_KeyDown);
             // 
             // lStandart4
             // 
@@ -378,6 +415,26 @@
             this.lStandart1.Text = "BARKOD:";
             this.lStandart1.Click += new System.EventHandler(this.lStandart1_Click);
             // 
+            // gridUrunler
+            // 
+            this.gridUrunler.AllowUserToAddRows = false;
+            this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridUrunler.EnableHeadersVisualStyles = false;
+            this.gridUrunler.Location = new System.Drawing.Point(0, 0);
+            this.gridUrunler.Name = "gridUrunler";
+            this.gridUrunler.RowHeadersVisible = false;
+            this.gridUrunler.RowHeadersWidth = 51;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridUrunler.RowTemplate.Height = 30;
+            this.gridUrunler.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gridUrunler.Size = new System.Drawing.Size(1126, 269);
+            this.gridUrunler.TabIndex = 0;
+            // 
             // fUrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -387,10 +444,13 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "fUrunGiris";
             this.Text = "Ürün Giriş Formu";
+            this.Load += new System.EventHandler(this.fUrunGiris_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,30 +458,33 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private tStandart tStandart4;
-        private tStandart tStandart3;
-        private tStandart tStandart2;
+        private tStandart tUrunGrup;
+        private tStandart tAciklama;
+        private tStandart tUrunAdi;
         private lStandart lStandart4;
         private lStandart lStandart3;
         private lStandart lStandart2;
         private lStandart lStandart1;
-        private tNumeric tNumeric4;
-        private tNumeric tNumeric3;
-        private tNumeric tNumeric2;
-        private tNumeric tNumeric1;
+        private tNumeric tKdv;
+        private tNumeric tMiktar;
+        private tNumeric tSatisFiyat;
+        private tNumeric tAlisFiyat;
         private lStandart lStandart8;
         private lStandart lStandart7;
         private lStandart lStandart6;
         private lStandart lStandart5;
-        private bStandart bStandart5;
-        private bStandart bStandart4;
-        private bStandart bStandart3;
-        private bStandart bStandart2;
-        private bStandart bStandart1;
-        private tStandart tStandart5;
-        private tNumeric tNumeric5;
+        private bStandart bRaporAl;
+        private bStandart bKaydet;
+        private bStandart bİptal;
+        private bStandart bBarkodd;
+        private bStandart bUrunGrubu;
+        private tStandart tUrunAra;
+        private tNumeric tUrunSayisi;
         private lStandart lStandart10;
         private lStandart lStandart9;
         public tStandart tBarkod;
+        public lStandart lKullanici;
+        private lStandart lStandart11;
+        private gridOzel gridUrunler;
     }
 }
