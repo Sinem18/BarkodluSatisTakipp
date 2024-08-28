@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tMiktar = new System.Windows.Forms.TextBox();
+            this.tSatisFiyat = new System.Windows.Forms.TextBox();
+            this.tAlisFiyat = new System.Windows.Forms.TextBox();
             this.cmbUrunGrup = new System.Windows.Forms.ComboBox();
             this.lKullanici = new BARKOD.lStandart();
             this.lStandart11 = new BARKOD.lStandart();
@@ -54,14 +58,14 @@
             this.lStandart2 = new BARKOD.lStandart();
             this.lStandart1 = new BARKOD.lStandart();
             this.gridUrunler = new BARKOD.gridOzel();
-            this.tAlisFiyat = new System.Windows.Forms.TextBox();
-            this.tSatisFiyat = new System.Windows.Forms.TextBox();
-            this.tMiktar = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sİLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -108,6 +112,30 @@
             this.splitContainer1.Size = new System.Drawing.Size(1126, 631);
             this.splitContainer1.SplitterDistance = 358;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // tMiktar
+            // 
+            this.tMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tMiktar.Location = new System.Drawing.Point(563, 122);
+            this.tMiktar.Name = "tMiktar";
+            this.tMiktar.Size = new System.Drawing.Size(120, 30);
+            this.tMiktar.TabIndex = 7;
+            // 
+            // tSatisFiyat
+            // 
+            this.tSatisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tSatisFiyat.Location = new System.Drawing.Point(563, 75);
+            this.tSatisFiyat.Name = "tSatisFiyat";
+            this.tSatisFiyat.Size = new System.Drawing.Size(120, 30);
+            this.tSatisFiyat.TabIndex = 6;
+            // 
+            // tAlisFiyat
+            // 
+            this.tAlisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tAlisFiyat.Location = new System.Drawing.Point(563, 31);
+            this.tAlisFiyat.Name = "tAlisFiyat";
+            this.tAlisFiyat.Size = new System.Drawing.Size(120, 30);
+            this.tAlisFiyat.TabIndex = 5;
             // 
             // cmbUrunGrup
             // 
@@ -399,6 +427,7 @@
             this.gridUrunler.Name = "gridUrunler";
             this.gridUrunler.RowHeadersVisible = false;
             this.gridUrunler.RowHeadersWidth = 51;
+            this.gridUrunler.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
             this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -407,29 +436,20 @@
             this.gridUrunler.Size = new System.Drawing.Size(1126, 269);
             this.gridUrunler.TabIndex = 0;
             // 
-            // tAlisFiyat
+            // contextMenuStrip1
             // 
-            this.tAlisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tAlisFiyat.Location = new System.Drawing.Point(563, 31);
-            this.tAlisFiyat.Name = "tAlisFiyat";
-            this.tAlisFiyat.Size = new System.Drawing.Size(120, 30);
-            this.tAlisFiyat.TabIndex = 5;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sİLToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
             // 
-            // tSatisFiyat
+            // sİLToolStripMenuItem
             // 
-            this.tSatisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tSatisFiyat.Location = new System.Drawing.Point(563, 75);
-            this.tSatisFiyat.Name = "tSatisFiyat";
-            this.tSatisFiyat.Size = new System.Drawing.Size(120, 30);
-            this.tSatisFiyat.TabIndex = 6;
-            // 
-            // tMiktar
-            // 
-            this.tMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tMiktar.Location = new System.Drawing.Point(563, 122);
-            this.tMiktar.Name = "tMiktar";
-            this.tMiktar.Size = new System.Drawing.Size(120, 30);
-            this.tMiktar.TabIndex = 7;
+            this.sİLToolStripMenuItem.Name = "sİLToolStripMenuItem";
+            this.sİLToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.sİLToolStripMenuItem.Text = "SİL";
+            this.sİLToolStripMenuItem.Click += new System.EventHandler(this.sİLToolStripMenuItem_Click);
             // 
             // fUrunGiris
             // 
@@ -447,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -482,5 +503,7 @@
         private System.Windows.Forms.TextBox tMiktar;
         private System.Windows.Forms.TextBox tSatisFiyat;
         private System.Windows.Forms.TextBox tAlisFiyat;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sİLToolStripMenuItem;
     }
 }

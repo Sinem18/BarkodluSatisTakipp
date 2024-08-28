@@ -56,5 +56,23 @@ namespace BARKOD
             listUrunGrup.ValueMember = "Id";
             listUrunGrup.DataSource = db.UrunGrup.OrderBy(a => a.UrunGrupAd).ToList();
         }
+
+        private void bSil_Click(object sender, EventArgs e)
+        {
+            int gurpid=Convert.ToInt32(listUrunGrup.SelectedValue.ToString());
+            string grupad = listUrunGrup.Text;
+            DialogResult onay = MessageBox.Show(grupad + "Grubu Silmek İstiyor Musunuz?","Silme İşlemi",MessageBoxButtons.YesNo);// Yes No Butonlarının bulunduğu bir mesaj kutusu oluşturur. 
+            if(onay == DialogResult.Yes)
+            {
+                var grup=db.UrunGrup.FirstOrDefault(a=>a.Id==gurpid);
+                db.UrunGrup.Remove(grup);
+                db.SaveChanges();
+                GrupDoldur();
+                tUrunGrupAd.Focus();
+                MessageBox.Show(grup + " Ürün Grubu Silindi");
+                fUrunGiris f = (fUrunGiris)Application.OpenForms["fUrunGiris"];
+                f.GrupDoldur();
+            }
+        }
     }
 }

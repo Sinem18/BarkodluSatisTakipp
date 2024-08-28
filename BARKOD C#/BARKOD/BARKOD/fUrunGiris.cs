@@ -97,6 +97,7 @@ namespace BARKOD
                     TemizlE();
 
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
+                    islemler.GridDuzenle(gridUrunler);
 
                 }
 
@@ -112,6 +113,7 @@ namespace BARKOD
         {
             string urunAd=tUrunAra.Text;
             gridUrunler.DataSource=db.Urun.Where(a=>a.UrunAd.Contains(urunAd)).ToList();
+            islemler.GridDuzenle(gridUrunler);
         }
 
         private void bİptal_Click(object sender, EventArgs e)
@@ -162,6 +164,11 @@ namespace BARKOD
             string olusanbarkod = sifirlar + barkodno.BarkodNo.ToString();
             tBarkod.Text = olusanbarkod;
             tUrunAdi.Focus();
+
+        }
+
+        private void sİLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

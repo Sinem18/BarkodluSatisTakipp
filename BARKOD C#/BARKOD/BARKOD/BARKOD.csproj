@@ -230,6 +230,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\clear4848.png" />
     <None Include="Resources\rapor4854.png" />
     <None Include="Resources\save24.png" />
     <None Include="Resources\cancel24.png" />

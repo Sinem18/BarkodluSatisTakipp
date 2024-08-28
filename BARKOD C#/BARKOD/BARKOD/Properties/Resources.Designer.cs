@@ -83,6 +83,16 @@ namespace BARKOD.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap clear4848 {
+            get {
+                object obj = ResourceManager.GetObject("clear4848", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Ekle20 {
             get {
                 object obj = ResourceManager.GetObject("Ekle20", resourceCulture);

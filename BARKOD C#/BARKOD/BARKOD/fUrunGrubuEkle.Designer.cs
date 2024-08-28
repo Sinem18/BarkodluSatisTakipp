@@ -31,7 +31,8 @@
             this.lStandart1 = new BARKOD.lStandart();
             this.listUrunGrup = new System.Windows.Forms.ListBox();
             this.tUrunGrupAd = new BARKOD.tStandart();
-            this.bStandart1 = new BARKOD.bStandart();
+            this.bSil = new BARKOD.bStandart();
+            this.bEKlee = new BARKOD.bStandart();
             this.SuspendLayout();
             // 
             // lStandart1
@@ -64,20 +65,36 @@
             this.tUrunGrupAd.Size = new System.Drawing.Size(374, 30);
             this.tUrunGrupAd.TabIndex = 2;
             // 
-            // bStandart1
+            // bSil
             // 
-            this.bStandart1.BackColor = System.Drawing.Color.DeepPink;
-            this.bStandart1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.bStandart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart1.Image = global::BARKOD.Properties.Resources.Ekle20;
-            this.bStandart1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart1.Location = new System.Drawing.Point(18, 358);
-            this.bStandart1.Name = "bStandart1";
-            this.bStandart1.Size = new System.Drawing.Size(374, 76);
-            this.bStandart1.TabIndex = 5;
-            this.bStandart1.Text = "EKLE";
-            this.bStandart1.UseVisualStyleBackColor = false;
-            this.bStandart1.Click += new System.EventHandler(this.bStandart1_Click);
+            this.bSil.BackColor = System.Drawing.Color.Orchid;
+            this.bSil.FlatAppearance.BorderColor = System.Drawing.Color.Orchid;
+            this.bSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bSil.Image = global::BARKOD.Properties.Resources.clear4848;
+            this.bSil.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bSil.Location = new System.Drawing.Point(18, 357);
+            this.bSil.Name = "bSil";
+            this.bSil.Size = new System.Drawing.Size(178, 78);
+            this.bSil.TabIndex = 5;
+            this.bSil.Text = "Sil";
+            this.bSil.UseVisualStyleBackColor = false;
+            this.bSil.Click += new System.EventHandler(this.bSil_Click);
+            // 
+            // bEKlee
+            // 
+            this.bEKlee.BackColor = System.Drawing.Color.DeepPink;
+            this.bEKlee.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.bEKlee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bEKlee.Image = global::BARKOD.Properties.Resources.Ekle20;
+            this.bEKlee.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bEKlee.Location = new System.Drawing.Point(202, 359);
+            this.bEKlee.Name = "bEKlee";
+            this.bEKlee.Size = new System.Drawing.Size(190, 76);
+            this.bEKlee.TabIndex = 5;
+            this.bEKlee.Text = "EKLE";
+            this.bEKlee.UseVisualStyleBackColor = false;
+            this.bEKlee.Click += new System.EventHandler(this.bStandart1_Click);
             // 
             // fUrunGrubuEkle
             // 
@@ -85,7 +102,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(414, 465);
-            this.Controls.Add(this.bStandart1);
+            this.Controls.Add(this.bSil);
+            this.Controls.Add(this.bEKlee);
             this.Controls.Add(this.tUrunGrupAd);
             this.Controls.Add(this.listUrunGrup);
             this.Controls.Add(this.lStandart1);
@@ -102,6 +120,7 @@
         private lStandart lStandart1;
         private System.Windows.Forms.ListBox listUrunGrup;
         private tStandart tUrunGrupAd;
-        private bStandart bStandart1;
+        private bStandart bEKlee;
+        private bStandart bSil;
     }
 }
