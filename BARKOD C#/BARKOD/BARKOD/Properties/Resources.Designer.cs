@@ -63,6 +63,16 @@ namespace BARKOD.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Ara32 {
+            get {
+                object obj = ResourceManager.GetObject("Ara32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap ara3232 {
             get {
                 object obj = ResourceManager.GetObject("ara3232", resourceCulture);
@@ -106,6 +116,16 @@ namespace BARKOD.Properties {
         internal static System.Drawing.Bitmap Ekle20 {
             get {
                 object obj = ResourceManager.GetObject("Ekle20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ekle32 {
+            get {
+                object obj = ResourceManager.GetObject("Ekle32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
