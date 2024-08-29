@@ -439,7 +439,7 @@ namespace BARKOD
 
 
                     }
-                    alisfiyattoplam += islemler.DoubleYap(dgrid.Rows[i].Cells["AlisFiyat"].Value.ToString());
+                    alisfiyattoplam += islemler.DoubleYap(dgrid.Rows[i].Cells["AlisFiyat"].Value.ToString())* islemler.DoubleYap(dgrid.Rows[i].Cells["Miktar"].Value.ToString());
 
                 }
                 IslemOzet io = new IslemOzet();

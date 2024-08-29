@@ -29,44 +29,47 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lStandart1 = new BARKOD.lStandart();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lFiltreleme = new BARKOD.lStandart();
+            this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.panelTarihler = new System.Windows.Forms.Panel();
-            this.dtBitişTarihi = new System.Windows.Forms.DateTimePicker();
-            this.dtBaslangucTarihi = new System.Windows.Forms.DateTimePicker();
+            this.dtbitis = new System.Windows.Forms.DateTimePicker();
+            this.dtbaslangıc = new System.Windows.Forms.DateTimePicker();
             this.lBitişTarihi = new BARKOD.lStandart();
             this.lBaslangıcTarih = new BARKOD.lStandart();
-            this.bStandart2 = new BARKOD.bStandart();
-            this.bStandart1 = new BARKOD.bStandart();
-            this.lStandart2 = new BARKOD.lStandart();
+            this.bgoster = new BARKOD.bStandart();
+            this.bGelirEkle = new BARKOD.bStandart();
+            this.lSatisToplam = new BARKOD.lStandart();
             this.lStandart3 = new BARKOD.lStandart();
             this.lStandart4 = new BARKOD.lStandart();
-            this.tStandart1 = new BARKOD.tStandart();
-            this.tStandart2 = new BARKOD.tStandart();
-            this.lStandart5 = new BARKOD.lStandart();
+            this.lIadeToplam = new BARKOD.lStandart();
             this.lStandart6 = new BARKOD.lStandart();
             this.lStandart7 = new BARKOD.lStandart();
-            this.tStandart3 = new BARKOD.tStandart();
-            this.tStandart4 = new BARKOD.tStandart();
-            this.lStandart8 = new BARKOD.lStandart();
+            this.lGelir = new BARKOD.lStandart();
             this.lStandart9 = new BARKOD.lStandart();
             this.lStandart10 = new BARKOD.lStandart();
-            this.tStandart5 = new BARKOD.tStandart();
-            this.tStandart6 = new BARKOD.tStandart();
-            this.lStandart11 = new BARKOD.lStandart();
+            this.lGider = new BARKOD.lStandart();
             this.lStandart12 = new BARKOD.lStandart();
             this.lStandart13 = new BARKOD.lStandart();
-            this.tStandart7 = new BARKOD.tStandart();
-            this.tStandart8 = new BARKOD.tStandart();
-            this.lStandart14 = new BARKOD.lStandart();
-            this.tStandart9 = new BARKOD.tStandart();
-            this.lStandart15 = new BARKOD.lStandart();
-            this.tStandart10 = new BARKOD.tStandart();
-            this.bStandart3 = new BARKOD.bStandart();
+            this.lKdvTop = new BARKOD.lStandart();
+            this.lKarTkomi = new BARKOD.lStandart();
+            this.bGiderEkle = new BARKOD.bStandart();
+            this.tGelirNakit = new BARKOD.tNumeric();
+            this.tGelirKart = new BARKOD.tNumeric();
+            this.tGiderNAkit = new BARKOD.tNumeric();
+            this.tGiderKart = new BARKOD.tNumeric();
+            this.tiadeNakit = new BARKOD.tNumeric();
+            this.tiadeKart = new BARKOD.tNumeric();
+            this.tSatisNakit = new BARKOD.tNumeric();
+            this.tSatisKart = new BARKOD.tNumeric();
+            this.tKartKomisyon = new BARKOD.tNumeric();
+            this.tKDVToplam = new BARKOD.tNumeric();
+            this.dgridListe = new BARKOD.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelTarihler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridListe)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -79,75 +82,76 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart3);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart8);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart6);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart4);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart10);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart9);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart2);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart7);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart5);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart3);
-            this.splitContainer1.Panel1.Controls.Add(this.tStandart1);
+            this.splitContainer1.Panel1.Controls.Add(this.tSatisKart);
+            this.splitContainer1.Panel1.Controls.Add(this.tiadeKart);
+            this.splitContainer1.Panel1.Controls.Add(this.tGiderKart);
+            this.splitContainer1.Panel1.Controls.Add(this.tGelirKart);
+            this.splitContainer1.Panel1.Controls.Add(this.tiadeNakit);
+            this.splitContainer1.Panel1.Controls.Add(this.tSatisNakit);
+            this.splitContainer1.Panel1.Controls.Add(this.tKDVToplam);
+            this.splitContainer1.Panel1.Controls.Add(this.tKartKomisyon);
+            this.splitContainer1.Panel1.Controls.Add(this.tGiderNAkit);
+            this.splitContainer1.Panel1.Controls.Add(this.tGelirNakit);
+            this.splitContainer1.Panel1.Controls.Add(this.bGiderEkle);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart13);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart15);
+            this.splitContainer1.Panel1.Controls.Add(this.lKarTkomi);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart10);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart14);
+            this.splitContainer1.Panel1.Controls.Add(this.lKdvTop);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart7);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart4);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart12);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart9);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart6);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart3);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart11);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart8);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart5);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart2);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart2);
-            this.splitContainer1.Panel1.Controls.Add(this.bStandart1);
+            this.splitContainer1.Panel1.Controls.Add(this.lGider);
+            this.splitContainer1.Panel1.Controls.Add(this.lGelir);
+            this.splitContainer1.Panel1.Controls.Add(this.lIadeToplam);
+            this.splitContainer1.Panel1.Controls.Add(this.lSatisToplam);
+            this.splitContainer1.Panel1.Controls.Add(this.bgoster);
+            this.splitContainer1.Panel1.Controls.Add(this.bGelirEkle);
             this.splitContainer1.Panel1.Controls.Add(this.panelTarihler);
-            this.splitContainer1.Panel1.Controls.Add(this.listBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.lStandart1);
+            this.splitContainer1.Panel1.Controls.Add(this.listFiltrelemeTuru);
+            this.splitContainer1.Panel1.Controls.Add(this.lFiltreleme);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.splitContainer1.Panel2.Controls.Add(this.dgridListe);
             this.splitContainer1.Size = new System.Drawing.Size(1220, 644);
             this.splitContainer1.SplitterDistance = 390;
             this.splitContainer1.TabIndex = 0;
             // 
-            // lStandart1
+            // lFiltreleme
             // 
-            this.lStandart1.AutoSize = true;
-            this.lStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart1.Location = new System.Drawing.Point(33, 39);
-            this.lStandart1.Name = "lStandart1";
-            this.lStandart1.Size = new System.Drawing.Size(142, 25);
-            this.lStandart1.TabIndex = 0;
-            this.lStandart1.Text = "Filtreleme Türü";
+            this.lFiltreleme.AutoSize = true;
+            this.lFiltreleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lFiltreleme.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lFiltreleme.Location = new System.Drawing.Point(33, 39);
+            this.lFiltreleme.Name = "lFiltreleme";
+            this.lFiltreleme.Size = new System.Drawing.Size(142, 25);
+            this.lFiltreleme.TabIndex = 0;
+            this.lFiltreleme.Text = "Filtreleme Türü";
             // 
-            // listBox1
+            // listFiltrelemeTuru
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
+            this.listFiltrelemeTuru.FormattingEnabled = true;
+            this.listFiltrelemeTuru.ItemHeight = 16;
+            this.listFiltrelemeTuru.Items.AddRange(new object[] {
             "Tümü ",
             "Satışlar",
             "İade",
             "Gelir(Satış Hariç)",
             "Gider(İade Hariç)"});
-            this.listBox1.Location = new System.Drawing.Point(38, 83);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(137, 148);
-            this.listBox1.TabIndex = 1;
+            this.listFiltrelemeTuru.Location = new System.Drawing.Point(38, 83);
+            this.listFiltrelemeTuru.Name = "listFiltrelemeTuru";
+            this.listFiltrelemeTuru.Size = new System.Drawing.Size(137, 148);
+            this.listFiltrelemeTuru.TabIndex = 1;
             // 
             // panelTarihler
             // 
-            this.panelTarihler.Controls.Add(this.dtBitişTarihi);
-            this.panelTarihler.Controls.Add(this.dtBaslangucTarihi);
+            this.panelTarihler.Controls.Add(this.dtbitis);
+            this.panelTarihler.Controls.Add(this.dtbaslangıc);
             this.panelTarihler.Controls.Add(this.lBitişTarihi);
             this.panelTarihler.Controls.Add(this.lBaslangıcTarih);
             this.panelTarihler.Location = new System.Drawing.Point(181, 87);
@@ -155,19 +159,19 @@
             this.panelTarihler.Size = new System.Drawing.Size(314, 144);
             this.panelTarihler.TabIndex = 4;
             // 
-            // dtBitişTarihi
+            // dtbitis
             // 
-            this.dtBitişTarihi.Location = new System.Drawing.Point(22, 111);
-            this.dtBitişTarihi.Name = "dtBitişTarihi";
-            this.dtBitişTarihi.Size = new System.Drawing.Size(281, 22);
-            this.dtBitişTarihi.TabIndex = 3;
+            this.dtbitis.Location = new System.Drawing.Point(22, 111);
+            this.dtbitis.Name = "dtbitis";
+            this.dtbitis.Size = new System.Drawing.Size(281, 22);
+            this.dtbitis.TabIndex = 3;
             // 
-            // dtBaslangucTarihi
+            // dtbaslangıc
             // 
-            this.dtBaslangucTarihi.Location = new System.Drawing.Point(22, 48);
-            this.dtBaslangucTarihi.Name = "dtBaslangucTarihi";
-            this.dtBaslangucTarihi.Size = new System.Drawing.Size(281, 22);
-            this.dtBaslangucTarihi.TabIndex = 2;
+            this.dtbaslangıc.Location = new System.Drawing.Point(22, 48);
+            this.dtbaslangıc.Name = "dtbaslangıc";
+            this.dtbaslangıc.Size = new System.Drawing.Size(281, 22);
+            this.dtbaslangıc.TabIndex = 2;
             // 
             // lBitişTarihi
             // 
@@ -191,52 +195,53 @@
             this.lBaslangıcTarih.TabIndex = 0;
             this.lBaslangıcTarih.Text = "BAŞLANGIÇ TARİHİ:";
             // 
-            // bStandart2
+            // bgoster
             // 
-            this.bStandart2.BackColor = System.Drawing.Color.DeepPink;
-            this.bStandart2.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
-            this.bStandart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart2.Image = global::BARKOD.Properties.Resources.Ara32;
-            this.bStandart2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bStandart2.Location = new System.Drawing.Point(501, 135);
-            this.bStandart2.Name = "bStandart2";
-            this.bStandart2.Size = new System.Drawing.Size(103, 85);
-            this.bStandart2.TabIndex = 5;
-            this.bStandart2.Text = "GÖSTER";
-            this.bStandart2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bStandart2.UseVisualStyleBackColor = false;
+            this.bgoster.BackColor = System.Drawing.Color.DeepPink;
+            this.bgoster.FlatAppearance.BorderColor = System.Drawing.Color.DeepPink;
+            this.bgoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bgoster.Image = global::BARKOD.Properties.Resources.Ara32;
+            this.bgoster.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bgoster.Location = new System.Drawing.Point(501, 136);
+            this.bgoster.Name = "bgoster";
+            this.bgoster.Size = new System.Drawing.Size(103, 84);
+            this.bgoster.TabIndex = 5;
+            this.bgoster.Text = "GÖSTER";
+            this.bgoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bgoster.UseVisualStyleBackColor = false;
+            this.bgoster.Click += new System.EventHandler(this.bgoster_Click);
             // 
-            // bStandart1
+            // bGelirEkle
             // 
-            this.bStandart1.BackColor = System.Drawing.Color.HotPink;
-            this.bStandart1.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
-            this.bStandart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart1.Image = global::BARKOD.Properties.Resources.Ekle32;
-            this.bStandart1.Location = new System.Drawing.Point(1085, 127);
-            this.bStandart1.Name = "bStandart1";
-            this.bStandart1.Size = new System.Drawing.Size(97, 70);
-            this.bStandart1.TabIndex = 5;
-            this.bStandart1.UseVisualStyleBackColor = false;
-            this.bStandart1.Click += new System.EventHandler(this.bStandart1_Click);
+            this.bGelirEkle.BackColor = System.Drawing.Color.HotPink;
+            this.bGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
+            this.bGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGelirEkle.Image = global::BARKOD.Properties.Resources.Ekle32;
+            this.bGelirEkle.Location = new System.Drawing.Point(1085, 127);
+            this.bGelirEkle.Name = "bGelirEkle";
+            this.bGelirEkle.Size = new System.Drawing.Size(97, 70);
+            this.bGelirEkle.TabIndex = 5;
+            this.bGelirEkle.UseVisualStyleBackColor = false;
+            this.bGelirEkle.Click += new System.EventHandler(this.bStandart1_Click);
             // 
-            // lStandart2
+            // lSatisToplam
             // 
-            this.lStandart2.AutoSize = true;
-            this.lStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart2.Location = new System.Drawing.Point(610, 87);
-            this.lStandart2.Name = "lStandart2";
-            this.lStandart2.Size = new System.Drawing.Size(127, 25);
-            this.lStandart2.TabIndex = 6;
-            this.lStandart2.Text = "Satış Toplam";
-            this.lStandart2.Click += new System.EventHandler(this.lStandart2_Click);
+            this.lSatisToplam.AutoSize = true;
+            this.lSatisToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lSatisToplam.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lSatisToplam.Location = new System.Drawing.Point(622, 107);
+            this.lSatisToplam.Name = "lSatisToplam";
+            this.lSatisToplam.Size = new System.Drawing.Size(127, 25);
+            this.lSatisToplam.TabIndex = 6;
+            this.lSatisToplam.Text = "Satış Toplam";
+            this.lSatisToplam.Click += new System.EventHandler(this.lStandart2_Click);
             // 
             // lStandart3
             // 
             this.lStandart3.AutoSize = true;
             this.lStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart3.Location = new System.Drawing.Point(610, 136);
+            this.lStandart3.Location = new System.Drawing.Point(622, 136);
             this.lStandart3.Name = "lStandart3";
             this.lStandart3.Size = new System.Drawing.Size(56, 25);
             this.lStandart3.TabIndex = 7;
@@ -247,48 +252,30 @@
             this.lStandart4.AutoSize = true;
             this.lStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart4.Location = new System.Drawing.Point(610, 170);
+            this.lStandart4.Location = new System.Drawing.Point(622, 170);
             this.lStandart4.Name = "lStandart4";
             this.lStandart4.Size = new System.Drawing.Size(48, 25);
             this.lStandart4.TabIndex = 8;
             this.lStandart4.Text = "Kart";
             // 
-            // tStandart1
+            // lIadeToplam
             // 
-            this.tStandart1.BackColor = System.Drawing.Color.White;
-            this.tStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart1.Location = new System.Drawing.Point(664, 127);
-            this.tStandart1.Name = "tStandart1";
-            this.tStandart1.Size = new System.Drawing.Size(83, 30);
-            this.tStandart1.TabIndex = 9;
-            // 
-            // tStandart2
-            // 
-            this.tStandart2.BackColor = System.Drawing.Color.White;
-            this.tStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart2.Location = new System.Drawing.Point(664, 167);
-            this.tStandart2.Name = "tStandart2";
-            this.tStandart2.Size = new System.Drawing.Size(83, 30);
-            this.tStandart2.TabIndex = 10;
-            // 
-            // lStandart5
-            // 
-            this.lStandart5.AutoSize = true;
-            this.lStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart5.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart5.Location = new System.Drawing.Point(777, 87);
-            this.lStandart5.Name = "lStandart5";
-            this.lStandart5.Size = new System.Drawing.Size(121, 25);
-            this.lStandart5.TabIndex = 6;
-            this.lStandart5.Text = "İade Toplam";
-            this.lStandart5.Click += new System.EventHandler(this.lStandart2_Click);
+            this.lIadeToplam.AutoSize = true;
+            this.lIadeToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lIadeToplam.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lIadeToplam.Location = new System.Drawing.Point(777, 99);
+            this.lIadeToplam.Name = "lIadeToplam";
+            this.lIadeToplam.Size = new System.Drawing.Size(121, 25);
+            this.lIadeToplam.TabIndex = 6;
+            this.lIadeToplam.Text = "İade Toplam";
+            this.lIadeToplam.Click += new System.EventHandler(this.lStandart2_Click);
             // 
             // lStandart6
             // 
             this.lStandart6.AutoSize = true;
             this.lStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart6.Location = new System.Drawing.Point(777, 136);
+            this.lStandart6.Location = new System.Drawing.Point(777, 135);
             this.lStandart6.Name = "lStandart6";
             this.lStandart6.Size = new System.Drawing.Size(56, 25);
             this.lStandart6.TabIndex = 7;
@@ -299,48 +286,30 @@
             this.lStandart7.AutoSize = true;
             this.lStandart7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart7.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart7.Location = new System.Drawing.Point(777, 170);
+            this.lStandart7.Location = new System.Drawing.Point(777, 169);
             this.lStandart7.Name = "lStandart7";
             this.lStandart7.Size = new System.Drawing.Size(48, 25);
             this.lStandart7.TabIndex = 8;
             this.lStandart7.Text = "Kart";
             // 
-            // tStandart3
+            // lGelir
             // 
-            this.tStandart3.BackColor = System.Drawing.Color.White;
-            this.tStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart3.Location = new System.Drawing.Point(831, 127);
-            this.tStandart3.Name = "tStandart3";
-            this.tStandart3.Size = new System.Drawing.Size(83, 30);
-            this.tStandart3.TabIndex = 9;
-            // 
-            // tStandart4
-            // 
-            this.tStandart4.BackColor = System.Drawing.Color.White;
-            this.tStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart4.Location = new System.Drawing.Point(831, 167);
-            this.tStandart4.Name = "tStandart4";
-            this.tStandart4.Size = new System.Drawing.Size(83, 30);
-            this.tStandart4.TabIndex = 10;
-            // 
-            // lStandart8
-            // 
-            this.lStandart8.AutoSize = true;
-            this.lStandart8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart8.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart8.Location = new System.Drawing.Point(979, 83);
-            this.lStandart8.Name = "lStandart8";
-            this.lStandart8.Size = new System.Drawing.Size(52, 25);
-            this.lStandart8.TabIndex = 6;
-            this.lStandart8.Text = "Gelir";
-            this.lStandart8.Click += new System.EventHandler(this.lStandart2_Click);
+            this.lGelir.AutoSize = true;
+            this.lGelir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lGelir.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lGelir.Location = new System.Drawing.Point(979, 99);
+            this.lGelir.Name = "lGelir";
+            this.lGelir.Size = new System.Drawing.Size(52, 25);
+            this.lGelir.TabIndex = 6;
+            this.lGelir.Text = "Gelir";
+            this.lGelir.Click += new System.EventHandler(this.lStandart2_Click);
             // 
             // lStandart9
             // 
             this.lStandart9.AutoSize = true;
             this.lStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart9.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart9.Location = new System.Drawing.Point(930, 136);
+            this.lStandart9.Location = new System.Drawing.Point(930, 135);
             this.lStandart9.Name = "lStandart9";
             this.lStandart9.Size = new System.Drawing.Size(56, 25);
             this.lStandart9.TabIndex = 7;
@@ -351,41 +320,23 @@
             this.lStandart10.AutoSize = true;
             this.lStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lStandart10.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart10.Location = new System.Drawing.Point(930, 170);
+            this.lStandart10.Location = new System.Drawing.Point(930, 169);
             this.lStandart10.Name = "lStandart10";
             this.lStandart10.Size = new System.Drawing.Size(48, 25);
             this.lStandart10.TabIndex = 8;
             this.lStandart10.Text = "Kart";
             // 
-            // tStandart5
+            // lGider
             // 
-            this.tStandart5.BackColor = System.Drawing.Color.White;
-            this.tStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart5.Location = new System.Drawing.Point(984, 127);
-            this.tStandart5.Name = "tStandart5";
-            this.tStandart5.Size = new System.Drawing.Size(83, 30);
-            this.tStandart5.TabIndex = 9;
-            // 
-            // tStandart6
-            // 
-            this.tStandart6.BackColor = System.Drawing.Color.White;
-            this.tStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart6.Location = new System.Drawing.Point(984, 167);
-            this.tStandart6.Name = "tStandart6";
-            this.tStandart6.Size = new System.Drawing.Size(83, 30);
-            this.tStandart6.TabIndex = 10;
-            // 
-            // lStandart11
-            // 
-            this.lStandart11.AutoSize = true;
-            this.lStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart11.Location = new System.Drawing.Point(989, 239);
-            this.lStandart11.Name = "lStandart11";
-            this.lStandart11.Size = new System.Drawing.Size(59, 25);
-            this.lStandart11.TabIndex = 6;
-            this.lStandart11.Text = "Gider";
-            this.lStandart11.Click += new System.EventHandler(this.lStandart2_Click);
+            this.lGider.AutoSize = true;
+            this.lGider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lGider.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lGider.Location = new System.Drawing.Point(989, 249);
+            this.lGider.Name = "lGider";
+            this.lGider.Size = new System.Drawing.Size(59, 25);
+            this.lGider.TabIndex = 6;
+            this.lGider.Text = "Gider";
+            this.lGider.Click += new System.EventHandler(this.lStandart2_Click);
             // 
             // lStandart12
             // 
@@ -409,76 +360,160 @@
             this.lStandart13.TabIndex = 8;
             this.lStandart13.Text = "Kart";
             // 
-            // tStandart7
+            // lKdvTop
             // 
-            this.tStandart7.BackColor = System.Drawing.Color.White;
-            this.tStandart7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart7.Location = new System.Drawing.Point(994, 279);
-            this.tStandart7.Name = "tStandart7";
-            this.tStandart7.Size = new System.Drawing.Size(83, 30);
-            this.tStandart7.TabIndex = 9;
+            this.lKdvTop.AutoSize = true;
+            this.lKdvTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKdvTop.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKdvTop.Location = new System.Drawing.Point(624, 289);
+            this.lKdvTop.Name = "lKdvTop";
+            this.lKdvTop.Size = new System.Drawing.Size(125, 25);
+            this.lKdvTop.TabIndex = 8;
+            this.lKdvTop.Text = "KDV Toplam";
+            this.lKdvTop.Click += new System.EventHandler(this.lStandart14_Click);
             // 
-            // tStandart8
+            // lKarTkomi
             // 
-            this.tStandart8.BackColor = System.Drawing.Color.White;
-            this.tStandart8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart8.Location = new System.Drawing.Point(994, 319);
-            this.tStandart8.Name = "tStandart8";
-            this.tStandart8.Size = new System.Drawing.Size(83, 30);
-            this.tStandart8.TabIndex = 10;
+            this.lKarTkomi.AutoSize = true;
+            this.lKarTkomi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKarTkomi.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKarTkomi.Location = new System.Drawing.Point(777, 289);
+            this.lKarTkomi.Name = "lKarTkomi";
+            this.lKarTkomi.Size = new System.Drawing.Size(145, 25);
+            this.lKarTkomi.TabIndex = 8;
+            this.lKarTkomi.Text = "Kart Komisyon ";
             // 
-            // lStandart14
+            // bGiderEkle
             // 
-            this.lStandart14.AutoSize = true;
-            this.lStandart14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart14.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart14.Location = new System.Drawing.Point(659, 282);
-            this.lStandart14.Name = "lStandart14";
-            this.lStandart14.Size = new System.Drawing.Size(125, 25);
-            this.lStandart14.TabIndex = 8;
-            this.lStandart14.Text = "KDV Toplam";
-            this.lStandart14.Click += new System.EventHandler(this.lStandart14_Click);
+            this.bGiderEkle.BackColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGiderEkle.Image = global::BARKOD.Properties.Resources.Ekle32;
+            this.bGiderEkle.Location = new System.Drawing.Point(1085, 279);
+            this.bGiderEkle.Name = "bGiderEkle";
+            this.bGiderEkle.Size = new System.Drawing.Size(97, 70);
+            this.bGiderEkle.TabIndex = 11;
+            this.bGiderEkle.UseVisualStyleBackColor = false;
             // 
-            // tStandart9
+            // tGelirNakit
             // 
-            this.tStandart9.BackColor = System.Drawing.Color.White;
-            this.tStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart9.Location = new System.Drawing.Point(664, 319);
-            this.tStandart9.Name = "tStandart9";
-            this.tStandart9.Size = new System.Drawing.Size(83, 30);
-            this.tStandart9.TabIndex = 10;
+            this.tGelirNakit.BackColor = System.Drawing.Color.White;
+            this.tGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tGelirNakit.Location = new System.Drawing.Point(984, 127);
+            this.tGelirNakit.Name = "tGelirNakit";
+            this.tGelirNakit.Size = new System.Drawing.Size(78, 30);
+            this.tGelirNakit.TabIndex = 12;
+            this.tGelirNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lStandart15
+            // tGelirKart
             // 
-            this.lStandart15.AutoSize = true;
-            this.lStandart15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart15.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart15.Location = new System.Drawing.Point(790, 282);
-            this.lStandart15.Name = "lStandart15";
-            this.lStandart15.Size = new System.Drawing.Size(145, 25);
-            this.lStandart15.TabIndex = 8;
-            this.lStandart15.Text = "Kart Komisyon ";
+            this.tGelirKart.BackColor = System.Drawing.Color.White;
+            this.tGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tGelirKart.Location = new System.Drawing.Point(984, 163);
+            this.tGelirKart.Name = "tGelirKart";
+            this.tGelirKart.Size = new System.Drawing.Size(78, 30);
+            this.tGelirKart.TabIndex = 12;
+            this.tGelirKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tStandart10
+            // tGiderNAkit
             // 
-            this.tStandart10.BackColor = System.Drawing.Color.White;
-            this.tStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tStandart10.Location = new System.Drawing.Point(795, 319);
-            this.tStandart10.Name = "tStandart10";
-            this.tStandart10.Size = new System.Drawing.Size(83, 30);
-            this.tStandart10.TabIndex = 10;
+            this.tGiderNAkit.BackColor = System.Drawing.Color.White;
+            this.tGiderNAkit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tGiderNAkit.Location = new System.Drawing.Point(994, 277);
+            this.tGiderNAkit.Name = "tGiderNAkit";
+            this.tGiderNAkit.Size = new System.Drawing.Size(78, 30);
+            this.tGiderNAkit.TabIndex = 12;
+            this.tGiderNAkit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // bStandart3
+            // tGiderKart
             // 
-            this.bStandart3.BackColor = System.Drawing.Color.DarkCyan;
-            this.bStandart3.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.bStandart3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStandart3.Image = global::BARKOD.Properties.Resources.Ekle32;
-            this.bStandart3.Location = new System.Drawing.Point(1085, 279);
-            this.bStandart3.Name = "bStandart3";
-            this.bStandart3.Size = new System.Drawing.Size(97, 70);
-            this.bStandart3.TabIndex = 11;
-            this.bStandart3.UseVisualStyleBackColor = false;
+            this.tGiderKart.BackColor = System.Drawing.Color.White;
+            this.tGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tGiderKart.Location = new System.Drawing.Point(994, 313);
+            this.tGiderKart.Name = "tGiderKart";
+            this.tGiderKart.Size = new System.Drawing.Size(78, 30);
+            this.tGiderKart.TabIndex = 12;
+            this.tGiderKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tiadeNakit
+            // 
+            this.tiadeNakit.BackColor = System.Drawing.Color.White;
+            this.tiadeNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tiadeNakit.Location = new System.Drawing.Point(839, 131);
+            this.tiadeNakit.Name = "tiadeNakit";
+            this.tiadeNakit.Size = new System.Drawing.Size(78, 30);
+            this.tiadeNakit.TabIndex = 12;
+            this.tiadeNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tiadeKart
+            // 
+            this.tiadeKart.BackColor = System.Drawing.Color.White;
+            this.tiadeKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tiadeKart.Location = new System.Drawing.Point(839, 165);
+            this.tiadeKart.Name = "tiadeKart";
+            this.tiadeKart.Size = new System.Drawing.Size(78, 30);
+            this.tiadeKart.TabIndex = 12;
+            this.tiadeKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tSatisNakit
+            // 
+            this.tSatisNakit.BackColor = System.Drawing.Color.White;
+            this.tSatisNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tSatisNakit.Location = new System.Drawing.Point(676, 131);
+            this.tSatisNakit.Name = "tSatisNakit";
+            this.tSatisNakit.Size = new System.Drawing.Size(85, 30);
+            this.tSatisNakit.TabIndex = 12;
+            this.tSatisNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tSatisKart
+            // 
+            this.tSatisKart.BackColor = System.Drawing.Color.White;
+            this.tSatisKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tSatisKart.Location = new System.Drawing.Point(676, 167);
+            this.tSatisKart.Name = "tSatisKart";
+            this.tSatisKart.Size = new System.Drawing.Size(85, 30);
+            this.tSatisKart.TabIndex = 12;
+            this.tSatisKart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tKartKomisyon
+            // 
+            this.tKartKomisyon.BackColor = System.Drawing.Color.White;
+            this.tKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tKartKomisyon.Location = new System.Drawing.Point(782, 317);
+            this.tKartKomisyon.Name = "tKartKomisyon";
+            this.tKartKomisyon.Size = new System.Drawing.Size(103, 30);
+            this.tKartKomisyon.TabIndex = 12;
+            this.tKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tKDVToplam
+            // 
+            this.tKDVToplam.BackColor = System.Drawing.Color.White;
+            this.tKDVToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tKDVToplam.Location = new System.Drawing.Point(629, 317);
+            this.tKDVToplam.Name = "tKDVToplam";
+            this.tKDVToplam.Size = new System.Drawing.Size(96, 30);
+            this.tKDVToplam.TabIndex = 12;
+            this.tKDVToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dgridListe
+            // 
+            this.dgridListe.AllowUserToAddRows = false;
+            this.dgridListe.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgridListe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgridListe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgridListe.EnableHeadersVisualStyles = false;
+            this.dgridListe.Location = new System.Drawing.Point(0, 0);
+            this.dgridListe.Name = "dgridListe";
+            this.dgridListe.RowHeadersVisible = false;
+            this.dgridListe.RowHeadersWidth = 51;
+            this.dgridListe.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.dgridListe.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.dgridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgridListe.RowTemplate.Height = 30;
+            this.dgridListe.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgridListe.Size = new System.Drawing.Size(1220, 250);
+            this.dgridListe.TabIndex = 2;
             // 
             // fRapor
             // 
@@ -491,10 +526,12 @@
             this.Text = "Raporlama Sayfası";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelTarihler.ResumeLayout(false);
             this.panelTarihler.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridListe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,39 +539,40 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ListBox listBox1;
-        private lStandart lStandart1;
+        private System.Windows.Forms.ListBox listFiltrelemeTuru;
+        private lStandart lFiltreleme;
         private System.Windows.Forms.Panel panelTarihler;
-        private System.Windows.Forms.DateTimePicker dtBitişTarihi;
-        private System.Windows.Forms.DateTimePicker dtBaslangucTarihi;
+        private System.Windows.Forms.DateTimePicker dtbitis;
+        private System.Windows.Forms.DateTimePicker dtbaslangıc;
         private lStandart lBitişTarihi;
         private lStandart lBaslangıcTarih;
-        private bStandart bStandart1;
-        private bStandart bStandart2;
-        private tStandart tStandart2;
-        private tStandart tStandart1;
+        private bStandart bGelirEkle;
+        private bStandart bgoster;
         private lStandart lStandart4;
         private lStandart lStandart3;
-        private lStandart lStandart2;
-        private tStandart tStandart8;
-        private tStandart tStandart6;
-        private tStandart tStandart4;
-        private tStandart tStandart10;
-        private tStandart tStandart9;
-        private tStandart tStandart7;
-        private tStandart tStandart5;
-        private tStandart tStandart3;
+        private lStandart lSatisToplam;
         private lStandart lStandart13;
-        private lStandart lStandart15;
+        private lStandart lKarTkomi;
         private lStandart lStandart10;
-        private lStandart lStandart14;
+        private lStandart lKdvTop;
         private lStandart lStandart7;
         private lStandart lStandart12;
         private lStandart lStandart9;
         private lStandart lStandart6;
-        private lStandart lStandart11;
-        private lStandart lStandart8;
-        private lStandart lStandart5;
-        private bStandart bStandart3;
+        private lStandart lGider;
+        private lStandart lGelir;
+        private lStandart lIadeToplam;
+        private bStandart bGiderEkle;
+        private tNumeric tSatisKart;
+        private tNumeric tiadeKart;
+        private tNumeric tGiderKart;
+        private tNumeric tGelirKart;
+        private tNumeric tiadeNakit;
+        private tNumeric tSatisNakit;
+        private tNumeric tGiderNAkit;
+        private tNumeric tGelirNakit;
+        private tNumeric tKDVToplam;
+        private tNumeric tKartKomisyon;
+        private gridOzel dgridListe;
     }
 }
