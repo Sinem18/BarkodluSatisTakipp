@@ -136,6 +136,9 @@
     <Compile Include="Satis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="StokHareket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="StokIzleme.cs">
       <SubType>Form</SubType>
     </Compile>

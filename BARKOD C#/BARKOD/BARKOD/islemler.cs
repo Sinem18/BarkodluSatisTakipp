@@ -108,5 +108,23 @@ namespace BARKOD
                 }
             }
         }
+
+        public static void StokHareket(string barkod,string urunad,string birim,string urungrup,double miktar,string kullanici)
+        {
+            using (var db = new BarkodDBEntities())
+            {
+                StokHareket sh = new StokHareket();
+                sh.Barkod = barkod;
+                sh.UrunAd=urunad;
+                sh.Birim = birim;
+                sh.UrunGrup=urungrup;
+                sh.Miktar=miktar;
+                sh.Kullanici=kullanici;
+                sh.Tarih=DateTime.Now;
+                db.StokHareket.Add(sh);
+                db.SaveChanges();
+
+            }
+        }
     }
 }

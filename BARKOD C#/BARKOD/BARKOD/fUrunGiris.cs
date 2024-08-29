@@ -100,6 +100,8 @@ namespace BARKOD
                     islemler.GridDuzenle(gridUrunler);
 
                 }
+                islemler.StokHareket(tBarkod.Text, tUrunAdi.Text, "Adet", cmbUrunGrup.Text,Convert.ToDouble(tMiktar.Text), lKullanici.Text);
+
 
             }
             else
@@ -156,7 +158,7 @@ namespace BARKOD
         {
             var barkodno = db.Barkod.First();
             int karakter = barkodno.BarkodNo.ToString().Length;
-            string sifirlar = string.Empty;// ne işe yaradığına bak 
+            string sifirlar = string.Empty;
             for(int i = 0; i < 8 - karakter; i++)
             {
                 sifirlar = sifirlar + "0";
