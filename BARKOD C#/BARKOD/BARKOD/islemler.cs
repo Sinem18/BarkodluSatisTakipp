@@ -126,5 +126,22 @@ namespace BARKOD
 
             }
         }
+
+        public static int KartKomisyon()
+        {
+            int sonuc = 0;
+            using(var db= new BarkodDBEntities())
+            {
+                if (db.Sabit.Any())
+                {
+                    sonuc = Convert.ToInt16(db.Sabit.First().KartKomisyon);
+                }
+                else
+                {
+                    sonuc=0;
+                }
+                return sonuc;
+            }
+        }
     }
 }

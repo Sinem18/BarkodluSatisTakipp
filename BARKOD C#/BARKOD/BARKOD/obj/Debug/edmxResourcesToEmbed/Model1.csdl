@@ -28,6 +28,7 @@
     <EntitySet Name="UrunGrup" EntityType="BarkodDBModel.UrunGrup" />
     <EntitySet Name="Barkod" EntityType="BarkodDBModel.Barkod" />
     <EntitySet Name="StokHareket" EntityType="BarkodDBModel.StokHareket" />
+    <EntitySet Name="Sabit" EntityType="BarkodDBModel.Sabit" />
   </EntityContainer>
   <EntityType Name="Terazi">
     <Key>
@@ -115,5 +116,12 @@
     <Property Name="Miktar" Type="Double" />
     <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Tarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sabit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KartKomisyon" Type="Int32" />
   </EntityType>
 </Schema>

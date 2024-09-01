@@ -506,7 +506,17 @@ namespace BARKOD
 
         private void bSatisYapiliyor_CheckedChanged(object sender, EventArgs e)
         {
+            if (bSatisYapiliyor.Checked)
+            {
+                bSatisYapiliyor.Text = "İade Yapılıyor";
+            }
+            else
+            {
+                bSatisYapiliyor.Text = "Satış Yapılıyor";
+            }
+            
 
+            
         }
 
         private void tbarkod_KeyPress(object sender, KeyPressEventArgs e)
